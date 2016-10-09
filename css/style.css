@@ -1,0 +1,158 @@
+html, body{
+	margin: 0;
+	padding: 0;
+    font-family: arial, sans-serif;
+    font-size: 15px;
+}
+
+.bets{
+    line-height: 0;
+	margin: 0 auto;
+	width: 100%;
+    column-count: 2
+}
+
+.bets__item{
+    line-height: 16px;
+	width: 500px;
+    display: inline-block;
+    vertical-align: top;
+    width: 96%;
+    
+    background-color: #fbfbfb;
+    margin: 1%;
+}
+
+.bets__header, .bets__col{
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.bets__header{
+    background-color: lightslategray;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.bets__header:after{
+    content: '';
+    border: 7px solid transparent;
+    border-top-color: white;
+    float: right;
+    display: inline-block;
+    margin-top: 5px;
+    
+}
+.bets__col{
+    float: left;
+    width: 50%;
+    box-shadow: inset 0 0 1px 1px white;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: lightcyan;
+}
+.bets__col:hover{
+    background-color: lightyellow;
+}
+
+.bet__name{
+float: left;
+}
+.bet__value{
+float: right;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 0px 5px;
+    -webkit-box-shadow:  0 0 5px lightgray;
+    box-shadow:  0 0 5px lightgray;
+    border-radius: 3px;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    height: 3000px;
+    width: 100%;
+    background-color: black;
+    top: 0;
+    opacity: .8;
+}
+.coupon-button{
+    display: none;
+    background-color: orange;
+    padding: 20px 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.coupon-button:hover{
+    opacity: .8;
+}
+.coupon{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    top: 100px;
+    margin-left: -250px;
+   background-color: #E5E5E5;
+    width: 500px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.coupon__row{
+    background-color: #FEE566;
+    border: 1px solid #E3C64E;
+    position: relative;
+    padding: 10px;
+    font-size: 13px;
+    margin-top: 10px;
+    padding-right: 50px;
+}
+
+.coupon__foot{
+    margin-top: 30px;
+}
+.row-close{
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    line-height: 70px;
+    width: 30px;
+    background-color: #E1C84A;
+    text-align: center;
+}
+.coupon__del{
+    margin-top: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+float: right;}
+.coupon__row:first-child{
+margin-top: 0;}
+.coupon__event, .coupon__bet, coupon__bet-group{
+    display: block;
+    margin-top: 5px;
+}
+
+.fl-left{
+float: left;}
+.fl-right{
+float: right;}
+
+
+
+.clearfix:after,
+.clearfix:before,
+.bets__col:after,
+.bets__col:before{
+    content: ' ';
+    display: table;
+}
+.clearfix:after,
+.bets__col:after{
+    clear: both;
+}
+

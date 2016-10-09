@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<noscript>
+		<b>В вашем браузере отключен Javascript.</b>
+		Пожалуйста включите Javascript для дальнейшей работы.
+	</noscript>
+	
+	<button class="coupon-button">Открыть купон</button>
+    
+    <div class="overlay"></div>
+	<div class="coupon" id="coupon">
+		<div class="coupon__top"></div>
+	    <a href="#" class="coupon__del">Удалить все</a>
+	    <div class="coupon__foot coupon-calc">
+	        <div class="coupon-calc__row clearfix">
+	            <span class="fl-left ">Итоговый коэффициент</span><span class="fl-right coupon-calc__ratio">0</span>
+	        </div>
+	        <div class="coupon-calc__row clearfix">
+	           <span class="fl-left coupon-calc__sum">Сумма ставки</span><span class="fl-right">RUB<input class="coupon-calc__input" type="text"></span>
+	        </div>
+	        <div class="coupon-calc__row clearfix">
+	           
+				<span class="fl-left ">Возможный выйгрыш</span><span class="fl-right coupon-calc__win">0</span>
+	        </div>
+	    </div>
+	</div>
+	
+</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/betsNames_ru.js"></script>
+	<script src="js/common.js"></script>
+</html>
