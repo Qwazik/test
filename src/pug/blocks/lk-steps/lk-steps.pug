@@ -1,0 +1,33 @@
+mixin lk-steps(data = {})
+  if data.schet
+    ul.lk-steps
+      li.lk-steps__item
+        a(href="#").lk-steps__link(
+          class=data.active===1 ? 'lk-steps__link_active' : 'lk-steps__link_done')
+            span.lk-steps__step Шаг 1. 
+            span.lk-steps__name Данные счета
+      li.lk-steps__item.lk-steps__item_arrow: i.icm.icm-long-arrow
+      li.lk-steps__item
+        a(href="#").lk-steps__link(
+          class=data.active===2 ? 'lk-steps__link_active' : data.active===3 ? 'lk-steps__link_done': '')
+            span.lk-steps__step Шаг 2. 
+            span.lk-steps__name Действия со счетом
+  else
+    ul.lk-steps
+      li.lk-steps__item
+        a(href="#").lk-steps__link(
+          class=data.active===1 ? 'lk-steps__link_active' : 'lk-steps__link_done')
+            span.lk-steps__step Шаг 1. 
+            span.lk-steps__name Данные о прадавце и покупателе
+      li.lk-steps__item.lk-steps__item_arrow: i.icm.icm-long-arrow
+      li.lk-steps__item
+        a(href="#").lk-steps__link(
+          class=data.active===2 ? 'lk-steps__link_active' : data.active===3 ? 'lk-steps__link_done': '')
+            span.lk-steps__step Шаг 2. 
+            span.lk-steps__name Список товаров и услуг
+      li.lk-steps__item.lk-steps__item_arrow: i.icm.icm-long-arrow
+      li.lk-steps__item
+        a(href="#").lk-steps__link(
+          class=data.active===3 ? 'lk-steps__link_active' : '')
+            span.lk-steps__step Шаг 3. 
+            span.lk-steps__name Действия со счетом

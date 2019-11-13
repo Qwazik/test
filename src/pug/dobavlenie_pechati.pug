@@ -1,0 +1,121 @@
+extends templates/_lk
+
+block head 
+    title Home
+
+block header 
+    +header({
+        auth: true,
+        border: true
+    })
+
+block main
+    +breadcrumbs({
+        container: true,
+        items: [
+            {
+                name: 'Личный кабинет',
+                link: '/lk.html'
+            },
+            {
+                name: 'Добавить печать и подпись',
+                link: '/user_panel_default.html'
+            }
+        ]
+    })
+    +lk
+        block lk-info
+            +lk-info
+        block lk-main
+          form(action="#").lk-main
+            .lk-main__header
+              .lk-main__header-row.lk-main__header-row_py-15.lk-main__header-row_sm-column
+                .lk-main__header-column
+                  h1.lk-main__title Добавить печать и подпись
+                .lk-main__header-column.lk-main__header-column_left
+                  a(href="#").link.link_dark.lk-main__back
+                    span.link__icon: i.icm.icm-back-arrow
+                    span Вернуться назад
+            .lk-main__body.lk-main__body_no-gutters
+              .lk-main__section
+                .lk-main__section-title Блок №1
+                .lk-main__section-row
+                  .lk-main__section-column.lk-main__section-column
+                    .form__row
+                      .form__field
+                        .form__field-title Должность
+                        .form__field-input-wrap
+                          .form__field-input.form__field-input_group
+                            .form__field-input-column
+                              input(type="text" value="Руководитель").form__input
+                      .form__field
+                        .form__field-title 
+                        .form__field-input                        
+                          .form__property
+                            a(href="#").form__field-link.link Загрузить подпись
+                          .form__property
+                            label.checkbox-label
+                              span.checkbox-label__checkbox.checkbox-label__checkbox_m10
+                                span.checkbox.checkbox_small
+                                  input(type="checkbox" name="save" checked).checkbox__input
+                                  span.checkbox__icon
+                              span.checkbox-label__title Добавить печать
+                    .form__row
+                      .form__field
+                        .form__field-title Печать
+                        .form__field-input-wrap
+                          .form__field-input.form__field-input_group
+                            .form__field-input-column
+                              input(type="text" value="Акива").form__input
+                  .lk-main__section-column.lk-main__section-column_signatures
+                    span.lk-main__signature: img(src="img/signature1.png", alt="")
+                    span.lk-main__stamp: img(src="img/signature2.png", alt="")
+              .lk-main__section
+                .lk-main__section-title Блок №2
+                .lk-main__section-row
+                  .lk-main__section-column
+                    .form__row
+                      .form__field
+                        .form__field-title Должность
+                        .form__field-input-wrap
+                          .form__field-input.form__field-input_group
+                            .form__field-input-column
+                              input(type="text" value="Бухгалтер").form__input
+                      .form__field
+                        .form__field-title 
+                        .form__field-input                        
+                          .form__property
+                            a(href="#").form__field-link.link Загрузить подпись
+                          .form__property
+                            label.checkbox-label
+                              span.checkbox-label__checkbox.checkbox-label__checkbox_m10
+                                span.checkbox.checkbox_small
+                                  input(type="checkbox" name="save" ).checkbox__input
+                                  span.checkbox__icon
+                              span.checkbox-label__title Добавить печать
+              .lk-main__section.lk-main__section_button
+                .lk-main__section-button: a(href="#").btn.btn_green.btn_small + Добавить блок 
+                .form__row
+                  .form__property
+                    label.checkbox-label
+                      span.checkbox-label__checkbox.checkbox-label__checkbox_m10
+                        span.checkbox.checkbox_small
+                          input(type="checkbox" name="save" ).checkbox__input
+                          span.checkbox__icon
+                      span.checkbox-label__title Добавить логотип к шаблону
+                .form__row
+                  .form__field
+                    .form__field-title Использовать по умолчанию в
+                    .form__field-input.form__field-input_group.form__field-input_big
+                      .form__field-input-column
+                        select.js-select(data-theme="standart")
+                          option(value="#" selected disabled) Счет на оплату
+                          option(value="#") ЧП Коновальцев и КО
+                          option(value="#") ЧП Иваненко
+                          option(value="#") ЧП Матюшенко
+                      .form__field-input-column.form__field-input-column_auto: +tip
+              .lk-main__footer
+                .lk-main__footer-button 
+                  button(type="submit").btn.btn_green Добавить
+block footer
+    +footer

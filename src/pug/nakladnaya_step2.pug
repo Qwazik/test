@@ -1,0 +1,54 @@
+extends templates/_lk
+
+block head 
+    title Home
+
+block header 
+    +header({
+        auth: true,
+        border: true
+    })
+
+block main
+    +breadcrumbs({
+        container: true,
+        items: [
+            {
+                name: 'Личный кабинет',
+                link: '/'
+            },
+            {
+                name: 'Накладная',
+                link: '/lk.html'
+            },
+            {
+                name: 'Новая накладная',
+                link: '/lk.html'
+            }
+        ]
+    })
+    +lk
+        block lk-info
+            +lk-info
+        block lk-main
+          form(action="#").lk-main
+            .lk-main__header
+              .lk-main__header-row.lk-main__header-row_py-15
+                .lk-main__header-column
+                  h1.lk-main__title Новая накладная
+              .lk-main__header-row.lk-main__header-row_green.lk-main__header-row_py-12
+                +lk-steps({
+                  active: 2
+                })
+            .lk-main__body
+              .lk-main__body-container
+                .lk-main__body-title Список товаров / услуг
+                +items-table
+            .lk-main__footer
+              a(href="#").lk-main__footer-link.link.link_dark Удалить черновик 
+              .lk-main__footer-status Сохранено в 16:22:47
+              .lk-main__footer-button 
+                button(type="submit").btn.btn_green Далее
+              
+block footer
+    +footer

@@ -1,0 +1,34 @@
+mixin footer()
+  .main-footer
+    .container
+      .main-footer__body
+        .main-footer__top
+          nav.main-footer__nav
+            ul.footer-nav
+              li.footer-nav__item
+                a(href="#").footer-nav__link О сервисе
+              li.footer-nav__item
+                a(href="#").footer-nav__link Как это работает?
+              li.footer-nav__item
+                a(href="#").footer-nav__link Тарифы
+              li.footer-nav__item
+                a(href="#").footer-nav__link Блог
+              li.footer-nav__item 
+                a(href="#").footer-nav__link Помощь
+              li.footer-nav__item
+                a(href="#").footer-nav__link Правила использования
+        .main-footer__bottom
+          .main-footer__logo
+            a(href="/").footer-logo: img(src="img/logo3.svg", alt="").footer-logo__image
+          .main-footer__copyright
+            p  2019 Copyright - bills.ms <br> Сервис выставления счетов.
+          .main-footer__social
+            ul.social
+              li.social__item
+                a(href="#").social__link: i.icm.icm-fb
+              li.social__item
+                a(href="#").social__link: i.icm.icm-vk
+  .d-none
+    +form('register')
+    +form('login')
+    +form('restore')

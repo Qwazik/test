@@ -1,0 +1,218 @@
+.fancybox-bg {
+  background-color: #eee;
+}
+.fancybox-content {
+  padding: 0;
+  background: none;
+  overflow: visible;
+  border-radius: 4px;
+}
+.select2 {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.select2-container{
+   
+}
+
+.select2-selection {
+  .select2-container--standart & {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    border: 1px solid #999999;
+    background-color: #FBFBFB;
+  }
+  .select2-container--standart.select2-container--disabled & {
+    background-color: #EDEDED;
+    color: #606060;
+  }
+  .select2-container--green & {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+     background: #5F8E90;
+     border: 1px solid #6CA0A2;
+     border-radius: 4px;
+     font-weight: 500;
+   
+  }
+
+  .select2-container--green.select2-container--focus & {
+    border:1px solid #05CC5C;
+  }
+
+  .select2-container--green.select2-container--open & {
+    background-color: #558386;
+  }
+
+  .select2-container--simple & {
+    height: 24px;
+    font-weight: 500;
+    color: #436C6F;
+    display: flex;
+    align-items: center;
+  }
+
+  .select2-container--standart & {
+    height: 46px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 0 0.6rem;
+  }
+
+  
+
+  &__arrow {
+    padding-left: 0.5 rem;
+    padding-right:0.5rem;
+    .select2-container--standart &,
+    .select2-container--simple & {
+      display: flex;
+      align-items: center;
+    }
+    b {
+      .select2-container--simple & {
+        border: 4px solid transparent;
+        border-top-color: #436C6F;
+        border-top-width: 6px;
+        border-bottom-width: 0;
+      }
+      .select2-container--standart &,
+      .select2-container--green & {
+        display: flex;
+        align-items: center;
+      }
+
+      &:after {
+        .select2-container--standart &,
+        .select2-container--green & {
+          content: '\e92a';
+          font-family: icomoon;
+          vertical-align: top;
+          line-height: 1;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.select2-dropdown {
+  .select2-container--standart & {
+    border-radius: 4px;
+    overflow: hidden;
+    border:none;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.14);
+    padding: .8rem;
+  }
+
+  .select2-container--green & {
+    border-radius: 4px;
+    overflow: hidden;
+    border:none;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.14);
+  }
+
+  .select2-container--simple & {
+    border: 1px solid $green;
+    border-radius: 4px;
+  }
+}
+
+.select2-results {
+
+  &__option {
+    &[aria-disabled="true"] {
+      display: none !important;
+    }
+
+    .select2-container--standart &{
+      border-radius: 4px;
+      color: #333;
+      padding: .9rem 1em;
+      font-size: 1.4rem;
+      font-weight: 500;
+      &--highlighted {
+        background-color: #DBF0FC;
+      }
+    }
+
+    .select2-container--green &{
+      font-weight: 400;
+      background-color: #F0FAFB;
+      color: #315658;
+      padding: 1.4rem 1.5rem;
+      border-bottom: 1px solid #E6F4F4;
+      &--highlighted {
+        background-color: lighten(#F0FAFB, 10%);
+      }
+    }
+
+    .select2-container--simple &{
+      font-weight: 400;
+      color: #315658;
+      border-bottom: 1px solid #E6F4F4;
+      &--highlighted {
+        background-color: #0FA65D;
+        color: $white
+      }
+    }
+  }
+}
+
+.datepicker{
+  font-size: 1.4rem;
+  font-family: $ff-primary;
+  &--nav-title {
+    font-family: $ff-primary;
+    font-weight: bold;
+  }
+  &--day-name{
+    color: #333;
+  }
+  .-weekend- {
+    color: #EB5757;
+  }
+  .-current- {
+    background-color: none;
+    color: $green;
+  }
+  .-selected- {
+    background-color: $green;
+    color: $white;
+  }
+  .-focus- {
+    background-color: lighten($green, 10%);
+    color: $white;
+  }
+  .-focus-.-current- {
+    background-color: lighten($green, 10%);
+    color: $white;
+  }
+  .-selected-.-focus-{
+    background-color: $green;
+    color: $white;
+  }
+  .-selected-.-current-{
+    background-color: $green;
+    color: $white;
+  }
+}
+
+.parsley-error {
+  border-color: #F52222 !important;
+}
+
+.parsley-errors-list {
+  @extend %disable-list;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #F52222;
+  text-align: right;
+}

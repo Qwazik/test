@@ -1,0 +1,161 @@
+extends templates/_lk
+
+block head 
+    title Home
+
+block header 
+    +header({
+        auth: true,
+        border: true
+    })
+
+block main
+    +breadcrumbs({
+        container: true,
+        items: [
+            {
+                name: 'Личный кабинет',
+                link: '/lk.html'
+            },
+            {
+                name: 'Акт выполненных работ',
+                link: '/user_panel_default.html'
+            },
+            {
+                name: 'Новый',
+                link: '/user_panel_default.html'
+            }
+        ]
+    })
+    +lk
+        block lk-info
+            +lk-info
+        block lk-main
+          form(action="#").lk-main
+            .lk-main__header
+              .lk-main__header-row.lk-main__header-row_py-15
+                .lk-main__header-column
+                  h1.lk-main__title Новый акт выполненных работ
+              .lk-main__header-row.lk-main__header-row_green.lk-main__header-row_py-12
+                +lk-steps({
+                  active: 1
+                })
+            .lk-main__body.lk-main__body_no-gutters
+              .lk-main__section
+                .form__row
+                  .form__field
+                    .form__field-title Номер и дата <span class="form__required"> *</span>
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input(type="text" value="234609209").form__input
+                      .form__field-input-column
+                        .input-date
+                          input(readonly type="text" value="29.09.2019").form__input.js-input-date
+                      .form__field-input-column.form__field-input-column_auto
+                        +tip
+                  .form__field
+                    .form__field-title 
+                    .form__field-input
+                      .form__property
+                        label.checkbox-label
+                          span.checkbox-label__checkbox.checkbox-label__checkbox_m10
+                            span.checkbox.checkbox_small
+                              input(type="checkbox" name="save" checked).checkbox__input
+                              span.checkbox__icon
+                          span.checkbox-label__title Добавить транспортную накладную
+                          .form__property-tip: +tip
+                .form__row
+                  .form__field
+                    .form__field-title Продавец
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group.form__field-input_big
+                        .form__field-input-column
+                          select.js-select(data-theme="standart")
+                            option(value="#" selected disabled) ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ
+                            option(value="#") ООО “Акива” (ИНН-2)
+                            option(value="#") ООО “Акива” (ИНН-2)
+                            option(value="#") ООО “Акива” (ИНН-2)
+                        .form__field-input-column.form__field-input-column_auto
+                          +tip
+                  .form__field
+                    .form__field-title 
+                    .form__field-input
+                      .form__property
+                          span.form__property-muted ИНН 
+                          span 3248438704
+                      .form__property
+                          span.form__property-muted КПП  
+                          span 103735600
+                      .form__property.form__property_clip
+                          span.form__property-muted ЮР. АДРЕС  
+                          span 241050, Россия, обл брянская, г брянск пер 2-й советский, д 3, офис 13
+                      a(href="#").form__field-link.link Изменить
+                .form__row
+                  .form__field
+                    .form__field-title Покупатель
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group.form__field-input_big
+                        .form__field-input-column
+                          input(type="text" value="").form__input
+                        .form__field-input-column.form__field-input-column_auto
+                          +tip
+                      a(href="#").form__field-link.link Ввести самостоятельно
+                .form__row
+                  .form__field
+                    .form__field-title Комментарий перед таблицей
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group.form__field-input_big
+                        .form__field-input-column
+                          textarea.form__input.form__input_textarea
+                        .form__field-input-column.form__field-input-column_auto
+                          +tip
+                .form__row
+                  .form__field
+                    .form__field-title Комментарий после таблицы
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group.form__field-input_big
+                        .form__field-input-column
+                          textarea.form__input.form__input_textarea
+                        .form__field-input-column.form__field-input-column_auto
+                          +tip
+              .lk-main__section
+                .lk-main__section-title Печать и подпись
+                .lk-signa
+                  .lk-signa__column
+                     .form__row
+                      .form__field
+                        .form__field-title Шаблон
+                        .form__field-input
+                          select.js-select(data-theme="standart")
+                            option(value="#" selected disabled) Руководитель без подписи, Акива, Бухга...
+                            option(value="#") ЧП Коновальцев и КО
+                            option(value="#") ЧП Иваненко
+                            option(value="#") ЧП Матюшенко
+                     .form__row
+                      .form__field.form__field_align-center
+                        .form__field-title.form__field-title_height-auto Исполнитель
+                        .form__field-input
+                          .lk-signa__input
+                            .lk-signa__input-value
+                              span: img(src="img/signature1.png", alt="")
+                              span: img(src="img/signature2.png", alt="")
+                            .lk-signa__input-link
+                              a(href="#").link добавить подпись
+                     .form__row
+                      .form__field.form__field_align-center
+                        .form__field-title.form__field-title_height-auto Заказчик
+                        .form__field-input
+                          .lk-signa__input
+                            .lk-signa__input-value.lk-signa__input-value_empty
+                            .lk-signa__input-link
+                              a(href="#").link добавить подпись
+                  .lk-signa__column.lk-signa__column_left
+                    .lk-signa__signa
+                      a(href="#").btn.btn_green.btn_small.lk-signa__button Добавить <br> печать
+              .lk-main__footer
+                a(href="#").lk-main__footer-link.link.link_dark Удалить черновик 
+                .lk-main__footer-status Сохранено в 16:22:47
+                .lk-main__footer-button 
+                  button(type="submit").btn.btn_green Далее
+block footer
+    +footer

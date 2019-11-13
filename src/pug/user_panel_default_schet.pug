@@ -1,0 +1,93 @@
+extends templates/_lk
+
+block head 
+    title Home
+
+block header 
+    +header({
+        auth: true,
+        border: true
+    })
+
+block main
+    +breadcrumbs({
+        container: true,
+        items: [
+            {
+                name: 'Личный кабинет',
+                link: '/'
+            },
+            {
+                name: 'Счет на оплату',
+                link: '/lk.html'
+            }
+        ]
+    })
+    +lk
+        block lk-info
+            +lk-info
+        block lk-main
+          .lk-main
+            .lk-main__header
+              .lk-main__header-row.lk-main__header-row_py-15
+                .lk-main__header-column
+                  h1.lk-main__title Счет на оплату
+                .lk-main__header-column.lk-main__header-column_left.lk-main__header-column_auto
+                  a(href="#").btn.btn_green.btn_nowrap Новый счет
+              .lk-main__header-row.lk-main__header-row_green.js-filter-parent
+                .lk-main__header-column
+                  +filter
+                .lk-main__header-column.lk-main__header-column_left.lk-main__header-column_auto
+                  form(action="#").search
+                    input(type="text" placeholder="Поиск").search__input
+                    button(type="submit").search__submit: i.icm.icm-search
+              .lk-main__header-row.lk-main__header-row_py-15.lk-main__header-row_between
+                .lk-main__header-column.lk-main__header-column_mr10.lk-main__header-column_fill-auto
+                  label.checkbox-label
+                    span.checkbox-label__checkbox.checkbox-label__checkbox_m10
+                      span.checkbox.checkbox_small.checkbox_shadow
+                        input(type="checkbox" name="save").checkbox__input
+                        span.checkbox__icon
+                    span.checkbox-label__title
+                      +select({
+                        theme: 'simple',
+                        placeholder: 'Действие с выбранным',
+                        items: ['Выставить', 'Оплатить', 'В черновики']
+                      })
+                .lk-main__actions
+                  .lk-main__header-column
+                    a(href="#").note-counter.note-counter_small.note-counter_dark
+                      span.note-counter__text Выставлены
+                      span.note-counter__num 0
+                  .lk-main__header-column.lk-main__header-column_left.lk-main__header-column_auto
+                    a(href="#").note-counter.note-counter_small.note-counter_dark.note-counter_not-empty
+                      span.note-counter__text Оплачены
+                      span.note-counter__num 2
+                  .lk-main__header-column.lk-main__header-column_left.lk-main__header-column_auto
+                    a(href="#").note-counter.note-counter_small.note-counter_dark.note-counter_not-empty
+                      span.note-counter__text Черновики
+                      span.note-counter__num 5
+            .lk-main__body.lk-main__body_no-gutters
+              +pay-list({
+                items: [
+                {
+                  name: 'ООО “Снабимпэкс”',
+                  price: '2 130 760'
+                },
+                {
+                  name: 'ООО “FrautGroup”',
+                  price: '10 500'
+                },
+                {
+                  name: 'ООО “Компани-Бу”',
+                  price: '81 430'
+                },
+                {
+                  name: 'ООО “Сильвер Стоун”',
+                  price: '25 000'
+                }
+              ]})
+            .lk-main__pagination
+              +lk-pagination()
+block footer
+    +footer

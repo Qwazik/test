@@ -1,0 +1,43 @@
+.breadcrumbs {
+	@extend %disable-list;
+	overflow: auto;
+	white-space: nowrap;
+
+	display: flex;
+	align-items: center;
+	font-size: $fz-1;
+	color: $muted-400;
+	padding: 20px 0;
+
+	.blog-content__breadcrumbs & {
+		color: #B6A0A0;
+	}
+
+	&__item {
+		
+		&:after {
+			line-height: 0;
+			font-family: icomoon;
+			content: '\e916';
+			margin: 0 2rem;
+			vertical-align: -1px;
+		}
+
+		&:last-child:after {
+			display: none;
+		}
+	}
+
+	&__link {
+		@extend %disable-link;
+
+		
+		&:hover {
+			color: $green;
+		}
+
+		&:active {
+			color: lighten($green, 10%);
+		}
+	}
+}

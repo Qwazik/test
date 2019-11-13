@@ -1,0 +1,96 @@
+extends templates/_lk
+
+block head 
+    title Home
+
+block header 
+    +header({
+        auth: true,
+        border: true
+    })
+
+block main
+    +breadcrumbs({
+        container: true,
+        items: [
+            {
+                name: 'Личный кабинет',
+                link: '/lk.html'
+            },
+            {
+                name: 'Счет на оплату',
+                link: '/user_panel_default.html'
+            }
+        ]
+    })
+    +lk
+        block lk-info
+            +lk-info
+        block lk-main
+          .lk-main
+            .lk-main__header
+              .lk-main__header-row.lk-main__header-row_py-15
+                .lk-main__header-column
+                  h1.lk-main__title Настройки
+            form(action="#").lk-main__body.lk-main__body_no-gutters
+              .lk-main__section
+                .form__row
+                  .form__field
+                    .form__field-title Владелец (ФИО)
+                    .form__field-input
+                      input(type="text" placeholder="Иванов Иван Иванович").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Тариф
+                    .form__field-input
+                      .lk-main__tarif
+                        span.lk-main__tarif-label
+                          span.label.label_small.label_orange Премиум
+                        span.lk-main__tarif-title Активен до 19.08.2020
+                        a(href="#").link.lk-main__tarif-more Управление тарифом
+              .lk-main__section
+                .lk-main__section-title Компания1
+                .form__row
+                  .form__field
+                    .form__field-title Компания
+                    .form__field-input
+                      input(type="text" value="ООО “Акива”").form__input
+                .form__row
+                  .form__field
+                    .form__field-title ИНН
+                    .form__field-input.form__field-input_small
+                      input(type="text" value="38664310984").form__input
+                .form__row
+                  .form__field
+                    .form__field-title КПП
+                    .form__field-input.form__field-input_small
+                      input(type="text" value="109289737").form__input
+                .form__row
+                  .form__field
+                    .form__field-title.form__field-title_height-auto Юридический адрес
+                    .form__field-input
+                      textarea.form__input.form__input_textarea 241050, Россия, обл брянская, г брянск пер 2-й советский, д 3, офис 13
+                .pt-1
+                  a(href="#").btn.btn_green.btn_small + Добавить компанию
+              .lk-main__section
+                .lk-main__section-title Компания 1
+                .form__row
+                  .form__field
+                    .form__field-title Эл. почта
+                    .form__field-input
+                      input(type="text" value="support.er@domain.com").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Пароль
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input(type="text" placeholder="Введите").form__input
+                      .form__field-input-column
+                        input(type="text" placeholder="Повторите").form__input
+                      .form__field-input-column.form__field-input-column_auto
+                        +tip
+                
+                .lk-main__section.lk-main__section_save
+                  a(href="#").btn.btn_green Сохранить
+block footer
+    +footer

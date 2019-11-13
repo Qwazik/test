@@ -1,0 +1,12 @@
+mixin pagination
+  .pagination.pagination_offset
+    .container
+      .pagination__body
+        a(href="#").pagination__prev.pagination__prev_disabled Предыдущая страница
+        ul.pagination__pages
+          li.pagination__item: a(href="#").pagination__link.pagination__link_active 1
+          li.pagination__item: a(href="#").pagination__link 2
+          li.pagination__item: a(href="#").pagination__link 3
+          li.pagination__item: a(href="#").pagination__link 4
+          li.pagination__item: a(href="#").pagination__link 5
+        a(href="#").pagination__next Следующая страница

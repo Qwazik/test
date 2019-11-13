@@ -1,0 +1,59 @@
+mixin user-nav()
+ nav.user-nav
+  .user-nav__row
+    .user-nav__column
+      .user-nav__item.user-nav__item_green
+        .user-nav__header
+          .user-nav__header-icon: i.icm.icm-invoice-1
+          .user-nav__header-info
+            .user-nav__name Счет на оплату
+            a(href="#").user-nav__link Список документов
+          a(href="#").user-nav__header-add.btn.btn_green: i.icm.icm-plus
+        .user-nav__docs
+          .user-nav__docs_none 
+            i.icm.icm-receipt
+            span Нет документов
+    .user-nav__column
+      .user-nav__item.user-nav__item_blue
+        .user-nav__header
+          .user-nav__header-icon: i.icm.icm-bill
+          .user-nav__header-info
+            .user-nav__name Счет фактура
+            a(href="#").user-nav__link Список документов
+          a(href="#").user-nav__header-add.btn.btn_green: i.icm.icm-plus
+        .user-nav__docs
+          .user-nav__doc
+            .user-nav__doc-status Выставлен
+            .user-nav__doc-name
+              span ООО “Снабимпэкс”
+              +dot-nav({classNames:'dot-nav_dark'})
+            .user-nav__doc-info № 839400388 от 13.08.2019 ООО ”Акива”
+
+          
+    .user-nav__column
+      .user-nav__item.user-nav__item_violet
+        .user-nav__header
+          .user-nav__header-icon: i.icm.icm-nak
+          .user-nav__header-info
+            .user-nav__name Счет на оплату
+            a(href="#").user-nav__link Список документов
+          a(href="#").user-nav__header-add.btn.btn_green: i.icm.icm-plus
+        .user-nav__docs
+          .user-nav__doc
+            .user-nav__doc-status Новая накладная
+            .user-nav__doc-name
+              span ООО “ТехГрупп”
+              +dot-nav({classNames:'dot-nav_dark'})
+            .user-nav__doc-info № 839400388 от 13.08.2019 ООО ”Спецтехника-А”
+    .user-nav__column
+      .user-nav__item.user-nav__item_orange
+        .user-nav__header
+          .user-nav__header-icon: i.icm.icm-list
+          .user-nav__header-info
+            .user-nav__name Акт выполненных работ
+            a(href="#").user-nav__link Список документов
+          a(href="#").user-nav__header-add.btn.btn_green: i.icm.icm-plus
+        .user-nav__docs
+          .user-nav__docs_none 
+            i.icm.icm-receipt
+            span Нет документов

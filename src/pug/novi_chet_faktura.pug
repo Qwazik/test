@@ -1,0 +1,175 @@
+extends templates/_lk
+
+block head 
+    title Home
+
+block header 
+    +header({
+        auth: true,
+        border: true
+    })
+
+block main
+    +breadcrumbs({
+        container: true,
+        items: [
+            {
+                name: 'Личный кабинет',
+                link: '/lk.html'
+            },
+            {
+                name: 'Счет фактура',
+                link: '/user_panel_default.html'
+            },
+            {
+                name: 'Выставление счета',
+                link: '/user_panel_default.html'
+            }
+        ]
+    })
+    +lk
+        block lk-info
+            +lk-info
+        block lk-main
+          form(action="#").lk-main
+            .lk-main__header
+              .lk-main__header-row.lk-main__header-row_py-15
+                .lk-main__header-column
+                  h1.lk-main__title Новый счет фактура
+              .lk-main__header-row.lk-main__header-row_green.lk-main__header-row_py-12
+                +lk-steps({
+                  active: 1
+                })
+            .lk-main__body.lk-main__body_no-gutters
+              .lk-main__section
+                .form__row
+                  .form__field
+                    .form__field-title Номер и дата <span class="form__required"> *</span>
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input(type="text" value="234609209").form__input
+                      .form__field-input-column
+                        .input-date
+                          input(readonly type="text" value="29.09.2019").form__input.js-input-date
+                      .form__field-input-column.form__field-input-column_auto
+                        +tip
+                  .form__field
+                    .form__field-title 
+                    .form__field-input
+                      .form__property
+                        label.checkbox-label
+                          span.checkbox-label__checkbox.checkbox-label__checkbox_m10
+                            span.checkbox.checkbox_small
+                              input(type="checkbox" name="save").checkbox__input
+                              span.checkbox__icon
+                          span.checkbox-label__title Исправление
+                          .form__property-tip: +tip
+                      .form__property
+                        label.checkbox-label
+                          span.checkbox-label__checkbox.checkbox-label__checkbox_m10
+                            span.checkbox.checkbox_small
+                              input(type="checkbox" name="save").checkbox__input
+                              span.checkbox__icon
+                          span.checkbox-label__title Номер госконтракта
+                          .form__property-tip: +tip
+                .form__row
+                  .form__field
+                    .form__field-title Номер и платежно-расчетного документа и дата
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input(type="text" value="234609209").form__input
+                      .form__field-input-column
+                        .input-date
+                          input(readonly type="text" value="29.09.2019").form__input.js-input-date
+                      .form__field-input-column.form__field-input-column_auto
+                        +tip
+                .form__row
+                  .form__field
+                    .form__field-title Валюта
+                    .form__field-input
+                      .form__field-input.form__field-input_group.form__field-input_big
+                        .form__field-input-column
+                          select.js-select(data-theme="standart" disabled)
+                            option(value="#" selected disabled) Российский рубль (643)
+                            option(value="#") Российский рубль (643)
+                            option(value="#") Российский рубль (643)
+                            option(value="#") Российский рубль (643)
+                        .form__field-input-column.form__field-input-column_auto
+                          +tip
+              .lk-main__section
+                .form__row
+                  .form__field
+                    .form__field-title Продавец
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group.form__field-input_big
+                        .form__field-input-column
+                          select.js-select(data-theme="standart")
+                            option(value="#" selected disabled) ООО “Акива” (ИНН-2)
+                            option(value="#") ООО “Акива” (ИНН-2)
+                            option(value="#") ООО “Акива” (ИНН-2)
+                            option(value="#") ООО “Акива” (ИНН-2)
+                        .form__field-input-column.form__field-input-column_auto
+                          +tip
+                  .form__field
+                    .form__field-title 
+                    .form__field-input
+                      .form__property
+                          span.form__property-muted ИНН 
+                          span 3248438704
+                      .form__property
+                          span.form__property-muted КПП  
+                          span 103735600
+                      .form__property.form__property_clip
+                          span.form__property-muted ЮР. АДРЕС  
+                          span 241050, Россия, обл брянская, г брянск пер 2-й советский, д 3, офис 13
+                      a(href="#").form__field-link.link Изменить
+           
+                .form__row
+                  .form__field
+                    .form__field-title Покупатель
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group.form__field-input_big
+                        .form__field-input-column
+                          input(type="text" value="").form__input
+                        .form__field-input-column.form__field-input-column_auto
+                          +tip
+                      a(href="#").form__field-link.link Ввести самостоятельно
+              .lk-main__section
+           
+                .form__row
+                  .form__field
+                    .form__field-title Грузоотправитель
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group
+                        .form__field-input-column
+                          input(type="text" value="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Адрес грузоотправителя
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group
+                        .form__field-input-column
+                          input(type="text" value="241050, Россия, обл брянская, г брянск пер советский").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Грузополучатель
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group
+                        .form__field-input-column
+                          input(type="text" value="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Адрес грузополучателя
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group
+                        .form__field-input-column
+                          input(type="text" value="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ").form__input
+                       
+                
+              .lk-main__footer
+                a(href="#").lk-main__footer-link.link.link_dark Удалить черновик 
+                .lk-main__footer-status Сохранено в 16:22:47
+                .lk-main__footer-button 
+                  button(type="submit").btn.btn_green Далее
+block footer
+    +footer

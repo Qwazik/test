@@ -1,0 +1,21 @@
+mixin dot-nav(data = {})
+  .dot-nav(class=data.classNames).js-dot-nav
+    button.dot-nav__button.js-dot-nav-button: i.icm.icm-three-dots-more-indicator
+    .dot-nav__menu.js-dot-nav-menu
+      .dot-nav__section
+        .dot-nav__section-title Статус
+        ul.dot-nav__list
+          li.dot-nav__list-item
+            a(href="#").dot-nav__list-link Выставлен
+          li.dot-nav__list-item
+            a(href="#").dot-nav__list-link Оплачен
+          li.dot-nav__list-item
+            a(href="#").dot-nav__list-link Черновик
+      .dot-nav__section
+        ul.dot-nav__list
+          li.dot-nav__list-item
+            a(href="#").dot-nav__list-link Выписать счет-фактуру
+          li.dot-nav__list-item
+            a(href="#").dot-nav__list-link Дублировать
+          li.dot-nav__list-item
+            a(href="#").dot-nav__list-link.dot-nav__list-link_red Удалить

@@ -1,0 +1,54 @@
+mixin filter
+  .filter.js-filter
+    .filter__button
+      button.btn.btn_bd-green.btn_base.js-filter-button
+        span.btn__icon: i.icm.icm-filter-results-button.fz-4
+        span Фильтр
+        span.btn_notify 3
+    .filter__drop.js-filter-drop
+      .filter__header
+        .filter__header-title Фильтр
+        .filter__header-close.js-filter-close: i.icm.icm-close-button-2
+      .filter__body
+        form(action="#")
+          .filter__section
+            .filter__section-title Номер счета
+            .filter__section-body
+              .filter__field
+                input(type="text" placeholder="Поиск по № счета").filter__input
+          .filter__section
+            .filter__section-title Поиск по дате
+            .filter__section-body
+              .filter__field.filter__field_group
+                .filter__field-column
+                  .input-date.input-date_filter
+                    input(type="text" placeholder="23.09.2019").filter__input.js-input-date
+                .filter__field-column.filter__field-column_sep -
+                .filter__field-column
+                  .input-date.input-date_filter
+                    input(type="text" placeholder="23.09.2019").filter__input.js-input-date
+          .filter__section
+            .filter__section-title Наименование контрагента
+            .filter__section-body
+              .filter__field
+                input(type="text" placeholder="").filter__input
+              a(href="#").link.filter__link Добавить
+          .filter__section
+            .filter__section-title Сумма счета
+            .filter__section-body
+              .filter__field.filter__field_group
+                  .filter__field-column
+                    .input-ruble.input-ruble_filter
+                      input(type="text" value="100 000 000").filter__input
+                  .filter__field-column.filter__field-column_sep -
+                  .filter__field-column
+                    .input-ruble.input-ruble_filter
+                      input(type="text" placeholder="Максимум").filter__input
+              .filter__field
+                select.js-select
+                  option(value="option") Не учитывать НДС
+                  option(value="option") Не учитывать НДС
+                  option(value="option") Не учитывать НДС
+      .filter__footer
+        button(type="reset").filter__reset Очистить
+        button(type="submit").btn.btn_green Применить фильтр

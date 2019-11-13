@@ -1,0 +1,166 @@
+.blog-content {
+  margin-bottom: 8.1rem;
+  overflow: hidden;
+
+  &__top {
+    background-color: #FFE8E8;
+
+    @include media(lg) {
+			padding-bottom: 5rem;
+		}
+
+    @include media(sm) {
+			padding-bottom: 3rem;
+		}
+  }
+
+  &__body {
+    padding: 0 10rem;
+    padding-top: 7.4rem + 4.9rem;
+    padding-bottom: 5.4rem;
+    border: 1px solid #DBDBDB;
+    border-top:none;
+    border-radius: 0 0 4px 4px;
+
+    @include media (lg) {
+      padding: 5rem;
+    }
+
+    @include media(md) {
+      padding: 3rem;
+    }
+
+    @include media(sm) {
+      border:none;
+      padding: 3rem 0;
+    }
+  }
+
+  &__footer{
+    display: flex;
+
+    @include media(md) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__breadcrumbs {
+    padding: 1.6rem 0 4.5rem;
+
+    @include media(md) {
+      padding: 3rem 0 1rem;
+    }
+  }
+
+  &__name {
+    font-size: 5rem;
+    font-weight: $font-weight-normal;
+    max-width: 44.8rem;
+    margin-bottom: 2.9rem;
+    line-height: 1;
+
+    @include media (xl) {
+      font-size: 4.5rem;
+    }
+
+    @include media(md) {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @include media(sm) {
+      font-size: 2.8rem;
+      max-width: none;
+    }
+  }
+
+  &__description {
+    position: relative;
+    padding-left: 10rem;
+    font-size: 2.2rem;
+    line-height: 1.48;
+    color: $black-button;
+
+    @include media (xl) {
+      padding-left: 8rem;
+      font-size: 2rem;
+    }
+
+    @include media(md) {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+
+    @include media(sm) {
+      padding-left: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: .5em;
+      display: block;
+      height: 4px;
+      width: 7rem;
+      background-color: $black-button;
+
+      @include media (xl) {
+        width: 5rem;
+      }
+
+      @include media (sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__category {
+    margin-bottom: 7.7rem;
+
+    @include media(md) {
+      margin-bottom: 5rem;
+    }
+
+    @include media(sm) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__top-body {
+    display: flex;
+    margin: 0 -1.5rem;
+    align-items: top;
+  }
+
+  &__top-text, 
+  &__top-image {
+    flex: 0 0 50%;
+    padding: 0 1.5rem;
+  }
+
+  &__top-text {
+    flex: 1 0 50%;
+  }
+
+  &__top-image {
+    margin-bottom: -7.4rem;
+
+    @include media (lg) {
+      display: none;
+    }
+  }
+
+  &__author {
+    margin-left: auto;
+    font-style: italic;
+    color: #606060;
+    font-weight: 300;
+    font-size: 1.6rem;
+
+    @include media(md) {
+      margin-left: 0;
+      margin-bottom: 3rem;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+mixin lk-info()
+  .lk-info.js-lk-info
+    .lk-info__header
+      .lk-info__header-title 
+        a(href="#") Александр Иванов
+        button.lk-info__settings: i.icm.icm-gear
+      .lk-info__header-status 
+        span.label.label_orange.label_small Премиум
+    .lk-info__slide.js-lk-slide
+      .lk-info__section
+        .lk-info__section-title Организация
+        .lk-info__section-body
+          +select({
+            theme: 'green',
+            items: ['ООО “Спецтехника-А”', 'ООО “Акива”', 'ООО “Искра-М”']
+          })
+      .lk-info__section
+        .lk-info__section-title Основное
+        .lk-info__section-body
+          ul.lk-info__list
+            li.lk-info__list-item
+              a(href="#").lk-info__list-link  
+                span.lk-info__list-icon
+                  span.lk-info__list-notify
+                  i.icm.icm-invoice-1
+                span.lk-info__list-title Счет на оплату
+            li.lk-info__list-item
+              a(href="#").lk-info__list-link  
+                span.lk-info__list-icon: i.icm.icm-bill
+                span.lk-info__list-title Счет фактура
+            li.lk-info__list-item
+              a(href="#").lk-info__list-link  
+                span.lk-info__list-icon: i.icm.icm-nak
+                span.lk-info__list-title Накладная
+            li.lk-info__list-item
+              a(href="#").lk-info__list-link  
+                span.lk-info__list-icon: i.icm.icm-list
+                span.lk-info__list-title Акт выполненных работ
+      .lk-info__section
+        .lk-info__section-body
+          ul.lk-info__list
+            li.lk-info__list-item
+              a(href="#").lk-info__list-link  
+                span.lk-info__list-icon: i.icm.icm-archive
+                span.lk-info__list-title Архив операций
+            li.lk-info__list-item
+              a(href="#").lk-info__list-link  
+                span.lk-info__list-icon: i.icm.icm-special
+                span.lk-info__list-title Тариф и лимиты
+    button.lk-info__slide-button.js-lk-slide-button 
+      i.icm.icm-chevron

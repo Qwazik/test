@@ -1,0 +1,60 @@
+.lk-steps {
+  @extend %disable-list;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100%;
+
+  @include media (md) {
+    flex-direction: column;
+  }
+
+  &__item {
+    @include media (md) {
+      text-align: center;
+      display: block;
+    }
+    &_arrow {
+      color: #87B8A3;
+      font-size: 1.3rem;
+      margin: 0 1rem;
+
+      @include media (md) {
+        visibility: hidden;
+        font-size: 7px;
+   
+      }
+    }
+  }
+
+  &__step {
+    font-weight: 300;
+  }
+
+  &__name {
+    font-weight: 500;
+    white-space: pre-wrap;
+  }
+
+  &__link {
+    @extend %disable-link;
+    font-size: 1.4rem;
+    padding: .4rem .7rem;
+    border-radius: 4px;
+    line-height: 1;
+    display: block;
+    color: #315658;
+
+    &_active {
+      background-color: #0FA65D;
+      color: $white;
+    }
+
+    &_done {
+      color: #0FA65D;
+    }
+  }  
+}

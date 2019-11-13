@@ -1,0 +1,21 @@
+mixin companies()
+  .companies
+    .companies__header.companies__item
+      .companies__title Мои компании
+      .companies__add
+        a(href="#").btn.btn_green.btn_small + Добавить
+    .companies__list
+      .companies__item
+        .companies__title ООО “Акива”
+        .companies__info
+          a(href="#").companies__link Показать реквизиты
+          a(href="#").companies__link Показать реквизиты
+          span.companies__dot-nav
+            +dot-nav()
+      .companies__item
+        .companies__title ООО “Спецтехника-А”
+        .companies__info
+          a(href="#").companies__link Показать реквизиты
+          a(href="#").companies__link Показать реквизиты
+          span.companies__dot-nav
+            +dot-nav()

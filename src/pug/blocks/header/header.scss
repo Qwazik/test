@@ -1,0 +1,164 @@
+.header-logo {
+
+	&__image {
+		width: 114.66px;
+		height: 38.36px;
+
+		@include media(md) {
+			width:  (114.66px / 1.4);
+			height: (38.36px / 1.4);
+		}
+	}
+}
+
+.mobile-nav-btn {
+	@extend %disable-btn;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0;
+
+	span {
+		width: 100%;
+		background: $black;
+		display: block;
+		width: 25px;
+		height: 4px;
+		margin: 2px 0;
+		border-radius: 2px;
+		transition: transform .25s;
+	}
+
+	&_active {
+		span:nth-child(1) {
+			transform: rotate(45deg) translate(3px, 3px);
+		}
+		span:nth-child(2) {
+			display: none;
+		}
+		span:nth-child(3) {
+			transform: rotate(-45deg) translate(3px, -3px);
+		}
+	}
+}
+
+.main-header {
+	position: relative;
+	padding: 1.8rem 0;
+	background: $white;
+
+	&_border {
+		border-bottom: 1px solid #E8E8E8;
+	}
+	
+	@include media (md) {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 100;
+		background: $white;
+		box-shadow: 0 0 10px rgba(0,0,0, .2);
+		padding: 1.2rem 0;
+	}
+
+	@include media (sm) {
+		padding: .9rem 0;
+	}
+
+	&__button {
+		@include media(sm) {
+			min-width: 0;
+			min-height: 0;
+			font-size: $fz-1;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+
+		@include media (md) {
+			width: 100%;
+		}
+	}
+
+	&__nav-wrapper {
+		@include media(md) {
+			position: absolute;
+			top: 100%;
+			background: white;
+			background: linear-gradient(to bottom, white, whitesmoke);
+			z-index: 1;
+			left: 0;
+			right: 0;
+			max-height: 0;
+			overflow: hidden;
+			transition: all .5s;
+
+			&_active {
+				max-height: 400px;
+			}
+		}
+	}
+
+	&__logo {
+		margin-right: 3.7rem;
+		display: flex;
+		align-items: center;
+
+		@include media(lg) {
+			margin-right: 0;
+		}
+	}
+}
+
+.main-nav {
+	@extend %disable-list;
+	display: flex;
+
+	@include media (md) {
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__item {
+		margin-left: 6.1rem;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		@include media (xl) {
+			margin-left: 4rem;
+		}
+
+		@include media (md) {
+			padding: 1rem 0;
+			margin: 0 -1.5rem -1px !important;
+			text-align: center;
+			border: 1px solid $border-color;
+		}
+	}
+
+	&__link {
+		@extend %disable-link;
+
+		font-size: $fz-3;
+
+		&:hover {
+			color: $green;
+		}
+
+		&:active {
+			color: lighten($green, 10%);
+		}
+
+		@include media (xl) {
+			font-size: $fz-2;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.categories {
+	
+
+	&_offset {
+		 margin-bottom: 2rem;
+
+		 @include media (md) {
+      margin: 2rem 0;
+    }
+	}
+
+	&__body {
+		background: #EFEFEF;
+		border-radius: 4px;
+		overflow: auto;
+	}
+	
+	&__list {
+		@extend %disable-list;
+		display: flex;
+		white-space: nowrap;
+	}
+
+	&__item {
+		flex: 1 1 auto;
+		border-right: 1px solid #DDDDDD;
+		&:last-child {
+			border:none;
+		}
+	}
+
+	&__link {
+		@extend %disable-link;
+		display: block;
+		text-align: center;
+		padding: 1.3rem;
+		font-size: 1.4rem;
+		transition: background .1s;
+
+		&:hover {
+			background: rgba($muted-100, .5);
+		}
+
+		&:active {
+			background: rgba($muted-100, 1);
+		}
+	}
+}

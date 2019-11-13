@@ -1,0 +1,154 @@
+.lk-info {
+  background-color: $green-dark;
+  border-radius: 4px; 
+  color: $white;
+  margin-bottom: 30px;
+
+  &__slide {
+    @include media(lg) {
+      display: none;
+    }
+  }
+
+  &__slide-button {
+    @extend %disable-btn;
+
+    color: inherit;
+    width: 100%;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    border-top: 1px solid #3C6466;
+    display: none;
+    @include media (lg) {
+      display: block;
+    }
+
+
+    &--active {
+      .icm {
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__header {
+    padding: 13px 16px 17px;
+  }
+
+  &__header-title {
+    color: #92F7CE;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+    a {
+      @extend %disable-link;
+      &:hover {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__settings {
+    @extend %disable-btn;
+    color: #92F7CE;
+    font-size: 20px;
+    padding: 0;
+    vertical-align: top;
+    margin-left: 10px;
+    line-height: 1;
+    transition: transform .3s;
+    border-radius: .1rem;
+    transition: background .25s, box-shadow .25s;
+
+    .icm {
+      vertical-align: top;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: #0FA65D;
+      box-shadow:  0 0 0 .6rem #0FA65D;
+    }
+
+    &:active {
+      color: lighten(#315658, 50%);
+    }
+  }
+
+  &__section {
+    padding: 10px 16px;
+    border-top: 1px solid #3C6466;
+  }
+
+  &__section-title {
+    font-size: 14px;
+    margin: 1rem 0 1.3rem;
+    color: #689093;
+  }
+
+  &__section-body {
+    padding-bottom: 0.9rem;
+  }
+
+  &__list {
+    @extend %disable-list;
+  }
+
+  &__list-notify {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: -1px;
+    margin-right: -1px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #45FF8F;
+    display: inline-block;
+  }
+
+  &__list-item {
+    margin-bottom: .8rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list-icon {
+    position: relative;
+    margin-right: 0.8rem;
+    font-size: 2.4rem;
+    align-self: flex-start;
+  }
+
+  &__list-link {
+    @extend %disable-link;
+
+    padding: .8rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    &:hover {
+      background-color: #284B4E;
+      color: #4CF496;
+      margin: 0 -16px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    &:active {
+      color: darken(#92F7CE, 30%);
+    }
+  }
+}

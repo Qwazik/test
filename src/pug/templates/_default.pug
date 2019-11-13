@@ -1,0 +1,49 @@
+include ../_config.pug
+include ../blocks/header/header
+include ../blocks/first-screen/first-screen
+include ../blocks/how-works/how-works
+include ../blocks/tarifs/tarifs
+include ../blocks/blog/blog
+include ../blocks/blog-item/blog-item
+include ../blocks/register-form/register-form
+include ../blocks/input/input
+include ../blocks/categories/categories
+include ../blocks/pagination/pagination
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/banner/banner
+include ../blocks/blog-content/blog-content
+include ../blocks/footer/footer
+include ../blocks/form/form
+doctype html
+html(lang="ru") 
+	head
+		block head
+			title=siteName
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		if responsive
+			meta(name="viewport", content="width=device-width, initial-scale=1, max-scale=1")
+		link(rel="shortcut icon" href="favicon.ico")
+		link(rel='apple-touch-icon', href='apple-touch-icon.png')
+		each val in cssList
+			link(href=val, rel='stylesheet') 
+	body
+		<!--[if lt IE 10]>
+		p.browserupgrade
+			|Ваш браузер  
+			strong устарел
+			| . Пожалуйста 
+			a(href='http://browsehappy.com/') обновите ваш браузер
+			|  для корректного отображения сайтов.
+		<![endif]-->
+		.page#app
+			header.page__header
+				block header
+			main.page__main
+				block main
+			footer.page__footer
+				block footer
+		//-scripts =================================================
+		block x-templates
+		each script in scriptList
+			script(src=script)

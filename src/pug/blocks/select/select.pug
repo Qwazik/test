@@ -1,0 +1,6 @@
+mixin select(data = {items:[]})
+  select.js-select(data-theme=data.theme data-placeholder=data.placeholder)
+    if data.placeholder
+      option(disabled selected value=data.placeholder)=data.placeholder
+    each item in data.items
+      option=item

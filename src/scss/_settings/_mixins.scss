@@ -1,0 +1,34 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content};
+  &:-moz-placeholder           {@content};
+  &::-moz-placeholder          {@content};
+  &:-ms-input-placeholder      {@content};  
+}
+@function fz($val){
+  @return ($val/10) * 1rem ;
+}
+@function rem($val){
+  @return $val/$bodyfont+rem;
+}
+@function em($val,$base:16){
+  @return ($val/$base) * 1em;
+}
+@function vw($fz, $window: 1920){
+  @return ($fz/($window/100)) * 1vw;
+}
+@function vwtopx($vw, $window: 1024){
+  @return ($vw * ($window / 100)) * 1px;
+}
+@mixin media($breakpoint) { 
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($grid-breakpoints, $breakpoint) - 1}) {
+      @content;
+    }
+  }
+ 
+  @else {
+    @media (max-width: #{$breakpoint}px) {
+      @content;
+    }
+  }
+}

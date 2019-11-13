@@ -1,0 +1,113 @@
+extends templates/_lk
+
+block head 
+    title Home
+
+block header 
+    +header({
+        auth: true,
+        border: true
+    })
+
+block main
+    +breadcrumbs({
+        container: true,
+        items: [
+            {
+                name: 'Личный кабинет',
+                link: '/lk.html'
+            },
+            {
+                name: 'Счет на оплату',
+                link: '/user_panel_default.html'
+            },
+            {
+                name: 'Выставление счета',
+                link: '/user_panel_default.html'
+            }
+        ]
+    })
+    +lk
+        block lk-info
+            +lk-info
+        block lk-main
+          form(action="#").lk-main
+            .lk-main__header
+              .lk-main__header-row.lk-main__header-row_py-15
+                .lk-main__header-column
+                  h1.lk-main__title Новый счет на оплату
+              .lk-main__header-row.lk-main__header-row_green.lk-main__header-row_py-12
+                +lk-steps({
+                  active: 1,
+                  schet: true
+                })
+            .lk-main__body.lk-main__body_no-gutters
+              .lk-main__section
+                .form__row
+                  .form__field
+                    .form__field-title Номер <span class="form__required"> *</span>
+                    .form__field-input.form__field-input_small
+                      input(required type="text" value="9834730221").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Плательщик
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group.form__field-input_big
+                        .form__field-input-column
+                          select.js-select(data-theme="standart")
+                            option(value="#" selected disabled) ЧП
+                            option(value="#") ЧП Коновальцев и КО
+                            option(value="#") ЧП Иваненко
+                            option(value="#") ЧП Матюшенко
+                        .form__field-input-column.form__field-input-column_auto
+                          +tip
+                      a(href="#").form__field-link.link Ввести самостоятельно
+                .form__row
+                  .form__field
+                    .form__field-title Оплатить до
+                    .form__field-input.form__field-input_group.form__field-input_medium
+                      .form__field-input-column
+                        .input-date
+                          input(readonly type="text" value="29.09.2019").form__input.js-input-date
+                      .form__field-input-column.form__field-input-column_auto
+                        +tip
+                .form__row
+                  .form__field
+                    .form__field-title  Дата
+                    .form__field-input.form__field-input_group.form__field-input_medium
+                      .form__field-input-column
+                        .input-date
+                          input(readonly type="text" value="23.09.2019").form__input.js-input-date
+                      .form__field-input-column.form__field-input-column_auto
+                        +tip
+                .form__row
+                  .form__field
+                    .form__field-title.form__field-title_height-auto Комментарий для плательщика
+                    .form__field-input.form__field-input_group.form__field-input_align-start
+                      .form__field-input-column
+                          textarea.form__input.form__input_textarea-big 241050, Россия, обл брянская, г брянск пер 2-й советский, д 3, офис 13
+                      .form__field-input-column.form__field-input-column_auto
+                          +tip
+              .lk-main__section
+                .lk-main__body-title Список товаров / услуг
+                +items-table({
+                  fill: true
+                })
+              .lk-main__section
+                .lk-main__section-title Печать и подпись
+                .form__row
+                  .form__field
+                    .form__field-title Шаблон
+                    .form__field-input
+                      select.js-select(data-theme="standart")
+                        option(value="#" selected disabled) Не добавлять
+                        option(value="#") ЧП Коновальцев и КО
+                        option(value="#") ЧП Иваненко
+                        option(value="#") ЧП Матюшенко
+              .lk-main__footer
+                a(href="#").lk-main__footer-link.link.link_dark Удалить черновик 
+                .lk-main__footer-status Сохранено в 16:22:47
+                .lk-main__footer-button 
+                  button(type="submit").btn.btn_green Далее
+block footer
+    +footer

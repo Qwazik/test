@@ -1,0 +1,133 @@
+// Font family
+$ff-primary: 'Rubik', sans-serif;
+
+// Colors
+$white: #fff;
+$black: #4f4f4f;
+$green: #0FA65D;
+$green-dark: #315658;
+$green-medium: #07792E;
+$blue: #0C8DB8;
+$blue-dark : #48578B;
+$muted-50: #E0E0E0;
+$muted-100: #DBDBDB;
+$muted-150: #fafafa;
+$muted-200: #BFBFBF;
+$muted-300: #C6C6C6;
+$muted-400: #999;
+$muted-500: #5E5E5E;
+$border-color: #EAEAEA;
+$pink: #FBA1A3;
+$yellow: #FFEE94;
+$affair: #7D4A96;
+$red: #D94F4F;
+
+$black-text: #454545;
+$orange-text: #6C4313;
+
+$orange-button: #FFB039;
+$black-button: #333;
+$blue-button: #1778F2;
+$blue-button-hover: #2E78CB;
+$green-button: $green;
+$green-button-hover: #048949;
+
+$text-color-base: #333;
+$link-color-base: $green;
+
+// Font size
+$fz-9: 5.4rem;
+$fz-8: 4.0rem;
+$fz-7: 3.2rem;
+$fz-6: 2.6rem;
+$fz-5: 2.4rem;
+$fz-4: 2.0rem;
+$fz-3: 1.8rem;
+$fz-2: 1.6rem;
+$fz-1: 1.4rem;
+$fz-0: 1.2rem;
+$core-fz: 1.6rem;
+
+// Font weight
+$font-weight-bold: bold;
+$font-weight-medium: 500;
+$font-weight-normal: normal;
+
+// Backgrounds
+$bg-black: $black;
+
+// Text styles
+$line-height-header: 1.08;
+
+$font-size-paragraph: $fz-3;
+
+$font-size-paragraph-xs: $fz-1;
+$line-height-paragraph: 1.55;
+
+$font-size-header-base: $fz-8;
+$line-height-header-base: $line-height-header;
+$font-weight-header-base: $font-weight-normal;
+
+$font-size-header-big: $fz-9;
+$line-height-header-big: $line-height-header;
+$font-weight-header-big: $font-weight-medium;
+
+// Grid
+$grid-columns:                12 !default;
+$grid-gutter-width:           3rem !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1220px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 750px,
+  lg: 960px,
+  xl: 1200px
+) !default;
+
+// This variable affects the `.m-*` and `.p-*` classes.
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: 1rem,
+  2: 2rem,
+  3: 3rem,
+  4: 4rem,
+  5: 5rem,
+  6: 6rem,
+  7: 7rem,
+  8: 8rem
+), $spacers);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+$sizes: map-merge((
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  auto: auto
+), $sizes);
+
+%disable-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+%disable-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+%disable-btn {
+  background: none;
+  border: none;
+}

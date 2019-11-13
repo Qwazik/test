@@ -1,0 +1,93 @@
+extends templates/_lk
+
+block head 
+    title Home
+
+block header 
+    +header({
+        auth: true,
+        border: true
+    })
+
+block main
+    +breadcrumbs({
+        container: true,
+        items: [
+            {
+                name: 'Личный кабинет',
+                link: '/lk.html'
+            },
+            {
+                name: 'Счет на оплату',
+                link: '/lk.html'
+            },
+            {
+                name: 'Выставление счета',
+                link: '/user_panel_default.html'
+            }
+        ]
+    })
+    +lk
+        block lk-info
+            +lk-info
+        block lk-main
+          form(action="#").lk-main
+            .lk-main__header
+              .lk-main__header-row.lk-main__header-row_py-15.lk-main__header-row_sm-column
+                .lk-main__header-column
+                  h1.lk-main__title Новый счет на оплату
+              .lk-main__header-row.lk-main__header-row_green.lk-main__header-row_py-12
+                +lk-steps({
+                  active: 2,
+                  schet: true
+                })
+            .lk-main__body.lk-main__body_no-gutters
+              .lk-main__section
+                .see-file
+                  .see-file__column
+                    a(href="#").btn.btn_dark 
+                      span.btn__icon: i.icm.icm-pdf-file-format-symbol
+                      span Посмотреть PDF
+                  .see-file__column
+                    a(href="#").btn.btn_dark 
+                      span.btn__icon: i.icm.icm-download
+                      span Скачать PDF
+
+              .lk-main__section
+                .form__row
+                  .form__field
+                    .form__field-title 
+                    .form__field-input                        
+                      .form__property.mb-2
+                        label.checkbox-label
+                          span.checkbox-label__checkbox.checkbox-label__checkbox_m10
+                            span.checkbox.checkbox_small
+                              input(type="checkbox" name="save" checked).checkbox__input
+                              span.checkbox__icon
+                          span.checkbox-label__title Отправить  PDF контрагенту
+                          .form__property-tip: +tip
+                  .form__field
+                    .form__field-title Email
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group
+                        .form__field-input-column
+                          input(type="email" value="").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Телефон
+                    .form__field-input-wrap
+                      .form__field-input.form__field-input_group
+                        .form__field-input-column
+                          input(type="tel" value="" required).form__input
+              .lk-main__section
+                .share-link.js-share-link
+                  .share-link__title Поделиться ссылкой
+                  input.share-link__value.js-share-link-text(value="bills.ms/Bgsd09A1")
+                  button.share-link__button.js-share-link-button: i.icm.icm-copy
+              .lk-main__footer
+                a(href="#").lk-main__footer-link.link.link_dark Удалить черновик 
+                .lk-main__footer-status Сохранено в 16:22:47
+                .lk-main__footer-button 
+                  button.btn.btn_green(type="submit") Отправить
+block footer
+    +footer

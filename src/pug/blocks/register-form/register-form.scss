@@ -1,0 +1,124 @@
+.register-form {
+  color: $muted-100;
+
+  &_offset {
+    margin-bottom: 9.5rem;
+
+    @include media (sm) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__name {
+    font-size: 4rem;
+    color: $white;
+    margin-bottom: 2.25rem;
+
+    @include media (sm) {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__description {
+    line-height: 1.4;
+
+    @include media (sm) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    padding: 4rem 4.5rem 5.5rem;
+    background-color: $muted-500;
+    border-radius: 4px;
+
+    @include media (lg) {
+      flex-wrap: wrap;
+    }
+
+    @include media (md) {
+      padding: 3rem;
+    }
+
+    @include media (sm) {
+      padding: 2rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+
+    &_right-top {
+      margin: 0 -1.5rem;
+
+      @include media (md) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &_right-bottom {
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 -1.5rem;
+
+      @include media (lg) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__column {
+    flex: 1 1 100%;
+    &_left {
+      margin-right: 11rem;
+      flex: 0 1 auto;
+      align-self: flex-start;
+
+      @include media(xl) {
+        margin-right: 3rem;
+      }
+
+      @include media (lg) {
+        margin-bottom: 3rem;
+      }
+
+      @include media (sm) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &_right-top {
+      margin-bottom: 3rem;
+      padding: 0 1.5rem;
+
+      @include media (sm) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &_right-bottom {
+      flex: 0 1 auto;
+      padding: 0 1.5rem;
+    }
+  }
+
+  &__submit {
+    padding: 1.1rem 2.5rem;
+    min-height: 5.6rem;
+    box-shadow: none;
+  }
+
+  &__agree {
+    font-size: 1.3rem;
+    max-width: 30rem;
+    line-height: 1.5;
+
+    @include media (md) {
+      margin-bottom: 3rem;
+    }
+  }
+}

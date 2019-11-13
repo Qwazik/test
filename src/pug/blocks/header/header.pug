@@ -1,0 +1,25 @@
+mixin header(data = {})
+	.main-header(class=data.border ? 'main-header_border' : '')
+		.container
+			.row.no-gutterd
+				.col-auto.main-header__logo
+					a(href="/").header-logo
+						img(src="img/logo.svg", alt="").header-logo__image
+				.col.d-flex.main-header__nav-wrapper.js-mobile-nav
+					nav.main-header__nav
+						ul.main-nav
+							li.main-nav__item: a(href="#how-works").main-nav__link.js-anchor-link Как это работает ?
+							li.main-nav__item: a(href="#tarifs").main-nav__link.js-anchor-link Тарифы
+							li.main-nav__item: a(href="#blog").main-nav__link.js-anchor-link Блог
+							li.main-nav__item: a(href="#register-form").main-nav__link.js-anchor-link Помощь
+				if data.auth
+					.col-auto.ml-auto: +user-menu()
+				else							
+					.col-auto.ml-auto
+						a(href="#formLogin" ).js-fancybox.btn.btn_dark.main-header__button Вход
+				.col-auto.d-flex.d-md-none  
+					button.mobile-nav-btn.js-mobile-btn
+						span
+						span
+						span
+			

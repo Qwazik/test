@@ -1,0 +1,94 @@
+mixin items-table(data={})
+  if data.fill
+    .items-table
+      table.items-table__table
+        thead.items-table__table-thead
+          tr.items-table__thead-tr
+            td.items-table__thead-td Артикул
+            td.items-table__thead-td Товар / Услуга
+            td.items-table__thead-td Цена за ед.
+            td.items-table__thead-td Кол-во
+            td.items-table__thead-td Единицы
+            td.items-table__thead-td НДС
+            td.items-table__thead-td Сумма, руб
+        tbody.items-table__tbody
+          tr.items-table__tbody-tr
+            td.items-table__tbody-td 109877902
+            td.items-table__tbody-td.items-table__tbody-td_product.items-table__tbody-td_auto Профнастил. К982-Т3
+            td.items-table__tbody-td.items-table__tbody-td_auto.items-table__tbody-td_mark.fw-medium
+              span 2 130 760
+              span.items-table__muted .00
+              
+            td.items-table__tbody-td 2.00
+            td.items-table__tbody-td Штука
+            td.items-table__tbody-td.items-table__tbody-td_auto
+              select.select
+                option(value="без НДС") без НДС
+                option(value="без НДС") с НДС
+            td.items-table__tbody-td.items-table__tbody-td_auto.items-table__tbody-td_mark.fw-medium
+              span 2 130 760
+              span.items-table__muted .00
+    .items-table__footer
+      .items-table__footer-column
+        a(href="#").btn.btn_green.btn_small + Добавить еще
+      .items-table__footer-column
+        ul.items-table__list
+          li.items-table__list-item 
+            span.items-table__muted НДС 10%:  
+            span 0,00
+          li.items-table__list-item 
+            span.items-table__muted НДС 18%:  
+            span 0,00 
+          li.items-table__list-item 
+            span.items-table__muted НДС 20%:  
+            span 0,00 
+        .items-table__sum
+          span 2 130 760
+          span.items-table__muted .00
+          i.icm.icm-ruble.items-table__ruble
+  else
+    .items-table
+      table.items-table__table
+        thead.items-table__table-thead
+          tr.items-table__thead-tr
+            td.items-table__thead-td Товар
+            td.items-table__thead-td Ед.
+            td.items-table__thead-td Вид <br> упаковки
+            td.items-table__thead-td Кол-во <br> в 1 месте
+            td.items-table__thead-td Мест / <br> Штук
+            td.items-table__thead-td Брутто
+            td.items-table__thead-td Нетто
+            td.items-table__thead-td Цена за ед.
+            td.items-table__thead-td НДС
+        tbody.items-table__tbody
+          tr.items-table__tbody-tr
+            td.items-table__tbody-td -
+            td.items-table__tbody-td.items-table__tbody-td_auto Шт.
+            td.items-table__tbody-td -
+            td.items-table__tbody-td -
+            td.items-table__tbody-td -
+            td.items-table__tbody-td -
+            td.items-table__tbody-td -
+            td.items-table__tbody-td -
+            td.items-table__tbody-td.items-table__tbody-td_auto
+              select.select
+                option(value="без НДС") без НДС
+                option(value="без НДС") с НДС
+    .items-table__footer
+      .items-table__footer-column
+        a(href="#").btn.btn_green.btn_small + Добавить еще
+      .items-table__footer-column
+        ul.items-table__list
+          li.items-table__list-item 
+            span.items-table__muted НДС 10%:  
+            span 0,00
+          li.items-table__list-item 
+            span.items-table__muted НДС 18%:  
+            span 0,00 
+          li.items-table__list-item 
+            span.items-table__muted НДС 20%:  
+            span 0,00 
+        .items-table__sum
+          span 00
+          span.items-table__muted .00
+          i.icm.icm-ruble.items-table__ruble

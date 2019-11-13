@@ -1,0 +1,154 @@
+.user-menu {
+  position: relative;
+  &__user {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    padding-right: 5.6rem;
+    background-color: #E8FFF5;
+    border: 1px solid #D6F8E9;
+    border-radius: 4px;
+    color: #2D3A3A;
+    cursor: pointer;
+
+    @include media(lg) {
+      padding: 0;
+      padding-right: 2rem;
+    }
+
+    &:hover {
+      background-color: darken(#E8FFF5,  2%);
+    }
+
+    &:active {
+      background-color: darken(#E8FFF5,  3%);
+    }
+    
+    .user-menu--open & {
+      background-color: #D6FFED;
+    }
+  }
+  &__icon {
+    background-color: #99F3BD;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 5px;
+    font-size: 1.9rem;
+    margin-right: 1.2rem;
+
+    @include media(lg){
+      margin-right: 0;
+      border-radius: 5px 0 0 5px;
+    }
+  }
+
+  &__name {
+    
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.05;
+    margin-bottom: 0.2rem;
+  }
+
+  &__company {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  &__menu {
+    @extend %disable-list;
+
+    position: absolute;
+    min-width: calc(100% + 10px);
+    right: -5px;
+    top: 100%;
+    background-color: #FBFBFB;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+    
+    animation: useMenuIn .25s ease-in-out;
+    display: none;
+
+    .user-menu--open & {
+      display: block;
+    }
+  }
+
+  &__arrow {
+    width: 2rem;
+    border-left: 1px solid #D6F8E9;
+    position: absolute;
+    right: 1px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__arrow-icon {
+    transform: rotate(180deg);
+    display: inline-block;
+    transition: transform .25s;
+
+    .user-menu--open &{
+      transform: rotate(0);
+    }
+  }
+
+  &__label {
+    margin-left: 2rem;
+    align-self: flex-start;
+    margin-top: 0.4em;
+  }
+
+  &__item {
+    margin: 2.1rem 2rem;
+  }
+
+  &__info {
+    @include media (lg) {
+      display: none;
+    }
+  }
+
+  &__link {
+    @extend %disable-link;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $green;
+    }
+
+    &:active {
+      color: darken($green, 10%);
+    }
+  }
+
+  &__link-icon {
+    margin-right: 1.4rem;
+    font-size: 2.4rem;
+    vertical-align: top;
+    line-height: 1;
+    align-self: flex-start;
+    i {
+      vertical-align: top;
+      line-height: 1;
+    }
+  }
+}
+
+@keyframes useMenuIn {
+  from {
+    opacity: 0;
+    transform: translate(0, 10%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

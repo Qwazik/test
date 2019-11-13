@@ -1,0 +1,19 @@
+mixin register-form()
+  .anchor.js-anchor#register-form
+  .register-form.register-form_offset
+    .container
+      .register-form__form
+        .register-form__column.register-form__column_left
+          .register-form__name Регистрация
+          .register-form__description Это быстро и бесплатно!<br>Попробуй Bills сейчас.
+        .register-form__column.register-form__column_right
+          .register-form__row.register-form__row_right-top
+            .register-form__column.register-form__column_right-top
+              +input('email', 'Email', 'youremail@domain.com')
+            .register-form__column.register-form__column_right-top
+              +input('text', 'ФИО', 'Иванов Иван Иванович')
+          .register-form__row.register-form__row_right-bottom
+            .register-form__column.register-form__column_right-bottom
+              p.register-form__agree Нажатие на кнопку “Зарегистрироваться” подтверждает ваше согласие c <a href="#" class="link link_green">условиями передачи информации</a>
+            .register-form__column.register-form__column_right-bottom
+              button(type="submit").btn.btn_green.btn_medium.register-form__submit Зарегистрироваться

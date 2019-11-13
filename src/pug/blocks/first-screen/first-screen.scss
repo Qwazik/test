@@ -1,0 +1,162 @@
+.first-screen {
+	position: relative;
+	display: flex;
+	height: 49.4rem;
+	box-shadow: 0px 9px 37px rgba(134, 146, 141, 0.1);
+	max-width: 1850px;
+	margin-left: 3.5rem;
+	margin-right: 3.5rem;
+	overflow: hidden;
+
+	&_offset {
+		margin-bottom: 10.1rem;
+
+		@include media (xl) {
+			margin-bottom: 7rem;
+		}
+
+		@include media (md) {
+			margin-bottom: 5rem;
+		}
+	}
+
+	@include media(1400) {
+		margin-left: 0;
+		margin-right: 0;
+		border-radius: 0;
+	}
+
+	@include media (xl) {
+		height: 39rem;
+	}
+
+	@include media (lg) {
+		height: (42rem / 1.3);
+	}
+
+	@include media (md) {
+		background: linear-gradient(270deg, #86F8C8 0%, #AEF5DD 50%), #ADF5DB;
+		height: auto;
+	}
+
+	&__container {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		flex: 1 1 auto;
+
+		@include media (md) {
+			position: static;
+			margin: auto;
+		}
+	}
+
+	&__left, &__right {
+		flex: 0 0 50%;
+		max-width: 50%;
+
+		@include media (md) {
+			display: none;
+		}
+	}
+
+	&__right {
+		background: linear-gradient(to right, #AEF5DD, #87F8C9);
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		border-radius: 0 4px 4px 0;
+		border-left: none;
+
+		@include media(1400) {
+			border-radius: 0;
+		}
+	}
+
+	&__left {
+		position: relative;
+		background: linear-gradient(296.36deg, #F4F4F4 2.34%, #FFFFFF 96.76%);
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		border-radius: 4px 0 0 4px;
+		box-sizing: border-box;
+
+		@include media(1400) {
+			border-radius: 0;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		background-image: url('../img/first-screen-image.png');
+		background-size: cover;
+		width: 70.4rem;
+		height: 44.5rem;
+		margin: auto -7.3rem auto auto;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		left: auto;
+
+		@include media (xl) {
+			width: (70.4rem / 1.2);
+			height: (44.5rem / 1.2);
+			margin: auto -4rem auto auto;
+		}
+
+		@include media (lg) {
+			background-image: url('../img/first-screen-image-lg.png');
+			width: (55.1rem / 1.5);
+			height: (44.5rem / 1.5);
+			margin: auto 2rem auto auto;
+		}
+
+		@include media (md) {
+			display: none;
+		}
+	}
+
+	&__text {
+		padding: 6.9rem 0 2rem 9.7rem;
+
+		@include media (xl) {
+			padding: 5rem 0 2rem 7rem;
+		}
+
+		@include media (lg) {
+			padding: 3rem 0 2rem 3rem;
+		}
+
+		@include media (md) {
+			padding: 5rem 0;
+		}
+	}
+
+	&__header {
+		font-weight: $font-weight-medium;
+		font-size: $fz-9;
+		line-height: $line-height-header;
+		color: $green-dark;
+		margin-bottom: 3.7rem;
+
+		@include media(xl){
+			font-size: $fz-8;
+			margin-bottom: 3rem;
+		}
+
+		@include media (lg) {
+			font-size: $fz-7;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__description {
+		font-size: $fz-3;
+		color: $green-dark;
+		line-height: $line-height-paragraph;
+		margin-bottom: 5.5rem;
+
+		@include media (xl) {
+			font-size: $fz-2;
+			margin-bottom: 4rem;
+		}
+	}
+}

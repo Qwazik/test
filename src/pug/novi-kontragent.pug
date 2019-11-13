@@ -1,0 +1,168 @@
+extends templates/_lk
+
+block head 
+    title Home
+
+block header 
+    +header({
+        auth: true,
+        border: true
+    })
+
+block main
+    +breadcrumbs({
+        container: true,
+        items: [
+            {
+                name: 'Личный кабинет',
+                link: '/lk.html'
+            },
+            {
+                name: 'Счет на оплату',
+                link: '/user_panel_default.html'
+            },
+            {
+                name: 'Выставление счета',
+                link: '/user_panel_default.html'
+            }
+        ]
+    })
+    +lk
+        block lk-info
+            +lk-info
+        block lk-main
+          form(action="#").lk-main
+            .lk-main__header
+              .lk-main__header-row.lk-main__header-row_py-15.lk-main__header-row_sm-column
+                .lk-main__header-column
+                  h1.lk-main__title Новый контрагент
+                .lk-main__header-column.lk-main__header-column_left
+                  a(href="#").link.link_dark.lk-main__back
+                    span.link__icon: i.icm.icm-back-arrow
+                    span Вернуться назад
+            .lk-main__body.lk-main__body_no-gutters
+              .lk-main__section
+                .form__row
+                  .form__field
+                    .form__field-title Имя контрагента
+                    .form__field-input.form__field-input_group.form__field-input_big
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                      .form__field-input-column.form__field-input-column_auto
+                        +tip
+                .form__row
+                  .form__field
+                    .form__field-title ИНН
+                    .form__field-input.form__field-input_group.form__field-input_big
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                      .form__field-input-column.form__field-input-column_auto
+                        +tip
+                .form__row
+                  .form__field
+                    .form__field-title КПП
+                    .form__field-input.form__field-input_group.form__field-input_big
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                      .form__field-input-column.form__field-input-column_auto
+                        +tip
+              .lk-main__section
+                .lk-main__section-title Банковские реквизиты
+                .form__row
+                  .form__field
+                    .form__field-title БИК банка
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input(type="text" value="" data-parsley-pattern="\\d{6}-\\d{3}").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Наименование банка
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Корр. счет
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Расчетный счет
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                .form__row
+                  .form__field.form__field_align-center.form__field_no-column
+                    .form__field-title.form__field-title_height-auto Сделать счет основным
+                    .form__field-input.form__field-input_group
+                      label.checkbox
+                        input(type="checkbox" name="save").checkbox__input
+                        span.checkbox__icon
+                      
+              .lk-main__section
+                .lk-main__section-title Банковские реквизиты
+                .form__row
+                  .form__field
+                    .form__field-title БИК банка
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Наименование банка
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Корр. счет
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Расчетный счет
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                .form__row
+                  .form__field.form__field_align-center.form__field_no-column
+                    .form__field-title.form__field-title_height-auto Сделать счет основным
+                    .form__field-input.form__field-input_group
+                      label.checkbox
+                        input(type="checkbox" name="save").checkbox__input
+                        span.checkbox__icon
+                .form__row
+                  a(href="#").btn.btn_green.btn_small + Добавить реквизиты
+              .lk-main__section
+                .lk-main__section-title Контактная информация
+                .form__row
+                  .form__field
+                    .form__field-title Имя
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Телефон
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+                .form__row
+                  .form__field
+                    .form__field-title Email
+                    .form__field-input.form__field-input_group
+                      .form__field-input-column
+                        input( type="text" value="").form__input
+          
+                .form__row
+                  a(href="#").btn.btn_green.btn_small + Добавить контакт
+                      
+              .lk-main__footer
+                a(href="#").lk-main__footer-link.link.link_dark Удалить черновик 
+                .lk-main__footer-status Сохранено в 16:22:47
+                .lk-main__footer-button 
+                  button(type="submit").btn.btn_green Далее
+block footer
+    +footer

@@ -1,0 +1,124 @@
+extends templates/_default
+
+block head 
+    title Home
+
+block header 
+    +header
+
+block main
+    +categories
+    +breadcrumbs({
+        container: true,
+        items: [
+            {
+                name: 'Главная',
+                link: '/'
+            },
+            {
+                name: 'Блог',
+                link: '/blog-list.html'
+            }
+        ]
+    })
+    .container
+        h2.header.mb-3 Блог
+    +banner
+    +blog({
+        header: false,
+        more: false,
+        className: 'blog_offset-small',
+        items: [
+            {
+                class: 'blog-item_pink blog-item_hide-image',
+                image: 'img/blog-item-pink.jpg',
+                big: true,
+                section: {
+                    class: 'label_green-dark',
+                    name: 'Интервью'
+                },
+                header: {
+                    title: 'Идеальное решение для фрилансера',
+                    big: true,
+                },
+                description: 'Фрилансер может выставить электронный счет (инвойс) заказчику и отправить его в email, в sms или через мессенджер.'
+            },
+            {
+                class: 'blog-item_muted',
+                image: '',
+                section: {
+                    class: 'label_affair',
+                    name: 'Оптимизация финансов'
+                },
+                header: {
+                    title: 'Точка безубыточности: как не работать себе в убыток?'
+                },
+                description: '<i>«Чем больше продашь, тем больше заработаешь»,</i> – эту формулу понимает любой предприниматель. Но, обычно, не все точно рассчитывают...'
+            },
+            {
+                class: 'blog-item_green',
+                image: 'img/blog-item-green1.jpg',
+                section: {
+                    class: 'label_green-medium',
+                    name: 'Финансы для начинающих'
+                },
+                header: {
+                    title: 'Управление финансами в стартапе'
+                },
+                description: 'На какие аспекты финансового управления нужно обращать внимание молодой и растущей компании, чтобы не стать банкротом...'
+            },
+            {
+                class: 'blog-item_muted',
+                image: '',
+                section: {
+                    class: 'label_blue',
+                    name: 'Аналитика'
+                },
+                header: {
+                    title: 'Новые законы 2019: главные изменения законодательства'
+                },
+                description: 'Каждый год Госдума и Правительство РФ неустанно трудятся над созданием новых законов и этот год не стал исключением.'
+            },
+            {
+                class: 'blog-item_green',
+                image: 'img/blog-item-green2.jpg',
+                section: {
+                    class: 'label_green-medium',
+                    name: 'Финансы для начинающих'
+                },
+                header: {
+                    title: 'Свой бухгалтер или фирма, оказывающая бухгалтерские услуги: что выбрать'
+                },
+                description: 'Что лучше свой бухгалтер или аутсорсинг — фирма, оказывающая бухгалтерские услуги? Это вопрос выбора, который всегда...'
+            },
+            {
+                class: 'blog-item_white',
+                image: '',
+                section: {
+                    class: 'label_red',
+                    name: 'Банки'
+                },
+                header: {
+                    title: 'Налог на самозанятых граждан: выход из тени'
+                },
+                description: 'Налог на самозанятых граждан — это новый налоговый спецрежим в России. Закон о нем был подписан президентом и опубликован...'
+            },
+            {
+                class: 'blog-item_yellow',
+                image: '',
+                section: {
+                    class: 'label_green',
+                    name: 'Новости Bills'
+                },
+                header: {
+                    title: 'Как работать дома и не сойти с ума: полезные советы'
+                },
+                description: 'Если вы работали в офисе по найму, а сейчас ушли в свободное плавание и работаете дома, но испытываете трудности с работоспособностью...'
+            }
+        ]
+    })
+    +pagination
+    +register-form
+    
+block footer
+    +footer

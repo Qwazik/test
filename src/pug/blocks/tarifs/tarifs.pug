@@ -1,0 +1,48 @@
+mixin tarifs()
+	.anchor.js-anchor#tarifs
+	section.tarifs.tarifs_offset
+		.container
+			h2.header.tarifs__header Тарифы
+			.tarifs__item
+				.tarif.tarif_align-center
+					.tarif__column
+						.tarif__name
+							.tarif__icon: img(src="img/icon2.svg", alt="")
+							span Бесплатно
+					.tarif__column.my-0.my-lg-2
+						.tarif__description 1 документ в день 
+					.tarif__column
+						.tarif__button 
+							a(href="#formRegister").btn.btn_green.js-fancybox Создать счет
+			.tarifs__item
+				.tarif.tarif_green
+					.tarif__column
+						.tarif__name
+							.tarif__icon: img(src="img/icon5.svg", alt="")
+							span Безлимит
+					.tarif__list 
+						ul.number-list
+							li.number-list__item
+								span.number-list__icon 1
+								span.number-list__text История выставленных счетов
+							li.number-list__item
+								span.number-list__icon 2
+								span.number-list__text Создание счетов-фактур, актов и накладных
+							li.number-list__item
+								span.number-list__icon 3
+								span.number-list__text Отправка счетов по СМС
+							li.number-list__item
+								span.number-list__icon 4
+								span.number-list__text Уведомление об оплате счета
+							li.number-list__item
+								span.number-list__icon 5
+								span.number-list__text Open-API для выставления счетов
+							li.number-list__item
+								span.number-list__icon 6
+								span.number-list__text Автоматическое добавление подписи и печати
+					.tarif__column.tarif__column_auto
+						.tarif__price
+							span.tarif__price-value 149
+							span.tarif__price-text руб. / мес.
+						.tarif__button
+							a(href="#formRegister").btn.btn_green.btn_medium.js-fancybox Создать счет

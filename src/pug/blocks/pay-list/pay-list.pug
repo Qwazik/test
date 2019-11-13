@@ -1,0 +1,19 @@
+mixin pay-list(data = {})
+  .pay-list.js-pay-list
+    table.pay-list__table
+      each item in data.items
+        tr.pay-list__item
+          td.pay-list__cell: .pay-list__info
+            .pay-list__info-column
+              label.checkbox.checkbox_small.pay-list__checkbox
+                input(type="checkbox" name="save").checkbox__input
+                span.checkbox__icon
+            .pay-list__info-column
+              .pay-list__name=item.name
+              .pay-list__desc № 839400388 от 13.08.2019
+          td.pay-list__cell: .pay-list__price 
+            span=item.price
+            span(class="pay-list__price-muted") .00
+            i.icm.icm-ruble
+          td.pay-list__cell.pay-list__cell_auto: .pay-list__dots
+            +dot-nav

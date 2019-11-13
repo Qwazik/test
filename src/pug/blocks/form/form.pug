@@ -1,0 +1,127 @@
+mixin form(form)
+  if form === 'register'
+    #formRegister
+      form(action="#").form
+        .form__main
+          .form__title Регистрация
+          .form__row
+            .form__field
+              .form__field-title ФИО
+              .form__field-input
+                input(type="text" placeholder="Иванов Иван Иванович").form__input
+          .form__row
+            .form__field
+              .form__field-title Email
+              .form__field-input
+                input(type="email" placeholder="youremail@domain.ru").form__input
+          .form__row
+            .form__field
+              .form__field-title Телефон
+              .form__field-input
+                input(type="tel" placeholder="+7 (495) 123 45 67").form__input
+          .form__row
+            .form__field
+              .form__field-title Пароль
+              .form__field-input
+                .input-password.js-password
+                  .input-password__input
+                    input(type="password" placeholder="Придумайте пароль").form__input.js-password-input
+                    button(type="button").input-password__show.js-password-show: i.icm.icm-eye
+                  .input-password__check
+                    .input-password__check-indicator.js-password-indicator
+                      .input-password__check-indicator-percent.js-password-percent
+                        .input-password__check-indicator-gradient.js-password-gradient
+                    .input-password__check-message.js-password-message Введите пароль
+          .form__footer
+            .form__footer-column
+              a(href="#").btn.btn_green Зарегистрироваться
+            .form__footer-column
+              .form__policy Нажимая на эту кнопку я принимаю условия <a href="#" class="link">политики конфиденциальности</a> и соглашаюсь с <a href="#" class="link">правилами сервиса</a>
+        .form__or
+          .form__or-row.form__or-row_soc-auth
+            .form__title.form__title_or или...
+            .form__row
+              a(href="#").btn.btn_blue
+                span.btn__icon
+                  i.icm.icm-facebook-logo-2
+                span(nowrap) Вход с Facebook
+            .form__row
+              a(href="#").btn.btn_white
+                span.btn__icon
+                  i.icm.icm-google
+                span(nowrap) Вход с Google
+          .form__or-row
+            .form__account 
+              .form__account-title Уже есть аккаунт Bills?
+              .form__account-button
+                a(href="#formLogin").js-fancybox.btn.btn_dark Вход
+  if form === 'login'
+    #formLogin
+      form(action="#").form
+        .form__main
+          .form__title Вход
+          .form__row
+            .form__field
+              .form__field-title Email
+              .form__field-input
+                input(type="email" placeholder="youremail@domain.ru").form__input
+          .form__row
+            .form__field
+              .form__field-title Пароль
+              .form__field-input
+                .input-password
+                  .input-password__input
+                    input(type="password" placeholder="Ваш пароль").form__input
+            .form__field
+              .form__field-title
+              .form__field-input
+                label.checkbox-label
+                  span.checkbox-label__checkbox
+                    span.checkbox
+                      input(type="checkbox" name="save").checkbox__input
+                      span.checkbox__icon
+                  span.checkbox-label__title Запомнить мой вход
+          .form__footer.form__footer_no-column
+            .form__footer-column
+              a(href="#").btn.btn_dark Вход
+            .form__footer-column
+              a(href="#formRestore").js-fancybox.form__forgot Я забыл(а) пароль
+        .form__or
+          .form__or-row.form__or-row_soc-auth
+            .form__title.form__title_or или...
+            .form__row
+              a(href="#").btn.btn_blue
+                span.btn__icon
+                  i.icm.icm-facebook-logo-2
+                span(nowrap) Вход с Facebook
+            .form__row
+              a(href="#").btn.btn_white
+                span.btn__icon
+                  i.icm.icm-google
+                span(nowrap) Вход с Google
+          .form__or-row
+            .form__account 
+              .form__account-title У меня нет <br> аккаунта
+              .form__account-button
+                a(href="#formRegister").js-fancybox.btn.btn_green Регистрация
+  if form === 'restore'
+    #formRestore
+      form(action="#").form
+        .form__main
+          .form__title.form__title_with-desc Восстановление пароля
+          .form__description Укажите электронную почту указанную при регистрации и вам будет отправлена ссылка на восстановление пароля
+          .form__row
+            .form__field
+              .form__field-title Email
+              .form__field-input
+                input(type="email" placeholder="youremail@domain.ru").form__input
+
+          .form__footer
+            .form__footer-column
+              a(href="#").btn.btn_dark Восстановить
+        .form__or
+          .form__or-row.form__or-row_soc-auth
+            .form__description.form__description_or Возникли трудности или вопросы по авторизации?
+            
+          .form__or-row
+            a(href="#").btn.btn_green Напишите нам

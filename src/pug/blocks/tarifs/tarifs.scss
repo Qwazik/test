@@ -1,0 +1,117 @@
+.tarifs {
+	&_offset {
+		margin-bottom: 11.9rem;
+
+		@include media (xl) {
+			margin-bottom: 9rem;
+		}
+
+		@include media (lg) {
+			margin-bottom: 7rem;
+		}
+
+	}
+
+	&__header {
+		margin-bottom: 4rem;
+	}
+
+	&__item {
+		margin-bottom: 4rem;
+	}
+}
+
+.tarif {
+	display: flex;
+	justify-content: space-between;
+	padding: 0rem 1.7rem;
+	background: #F7F7F7;
+	border: 1px solid #E3E3E3;
+	border-radius: 4px;
+
+	@include media (xl) {
+		flex-wrap: wrap;
+	}
+
+	&_green {
+		background-color: #EBFFF7;	
+		border: 1px solid #A2DCBD;
+	}
+
+	&_align-center {
+		align-items: center;
+	}
+	
+	&__name {
+		display: flex;
+		align-items: center;
+		font-weight: $font-weight-medium;
+		font-size: $fz-6;
+
+		.tarif_green & {
+			color: #315658;
+		}
+	}
+
+	&__description {
+		font-size: $fz-3;
+	}
+
+	&__icon {
+		margin-right: 1.8rem;
+		width: 48px;
+		height: 48px;
+	}
+
+	&__price {
+		.tarif_green & {
+			color: #315658;
+		}
+		line-height: 1;
+		margin-bottom: 3.8rem;
+		white-space: nowrap;
+	}
+
+	&__price-value {
+		font-size: 4.6rem;
+		font-weight: $font-weight-medium;
+		margin-right: 1.3rem;
+	}
+
+	&__button {
+
+		.btn {
+			width: 100%;
+
+			@include media (md) {
+				width: auto;
+			}
+		}
+	}
+
+	&__list {
+		flex: 1 1 100%;
+		width: 100%;
+		margin: 2.5rem 6rem;
+
+		@include media (xl) {
+			margin: 2.5rem 0;
+		}
+	}
+
+	&__column {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+
+		&_auto {
+			flex: 0 1 auto;
+			width: auto;
+		}
+
+		@include media (md) {
+			flex: 0 0 100%;
+			width: 100%;
+			margin: 3rem 0;
+		}
+	}
+}

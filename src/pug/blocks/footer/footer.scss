@@ -1,0 +1,153 @@
+.main-footer {
+  margin-bottom: 5.6rem;
+
+  @include media (sm) {
+      margin-bottom: 1.5rem;
+  }
+
+  &__body {
+    background-color: #f4f4f4;
+    border: 1px solid #DBDBDB;
+    border-radius: 4px;
+  }
+
+  &__top {
+    border-bottom: 1px solid #DBDBDB;
+    padding: 3rem 4.2rem;
+
+    @include media (lg) {
+      padding: 2rem 3rem;
+    }
+
+    @include media (sm) {
+      padding: 2rem;
+    }
+  }
+
+  &__bottom {
+    padding: 2.6rem 4.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include media (lg) {
+      padding: 2rem 3rem;
+    }
+
+    @include media (sm) {
+      padding: 2rem;
+    }
+    
+  }
+
+  &__logo {
+    margin-right: 4rem;
+  }
+
+  &__copyright {
+    color: $muted-400;
+    font-size: $fz-1;
+    line-height: 1.35;
+
+    @include media (sm) {
+      flex: 0 0 100%;
+      width: 100%;
+      order: 3;
+      margin-top: 3rem;
+    }
+  }
+
+  &__social {
+    margin-left: auto;
+
+    @include media (sm) {
+      order: 2;
+    }
+  }
+}
+
+.footer-logo {
+  opacity: 0.5;
+
+  &__image {
+    width: 8.7rem;
+    height: 4.1rem;
+  }
+}
+
+.footer-nav {
+  @extend %disable-list;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-right: 6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @include media (lg) {
+      margin-right: 2rem;
+    }
+
+    @include media (sm) {
+      flex: 0 0 100%;
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    @extend %disable-link;
+
+    font-size: $fz-1;
+
+    
+		&:hover {
+			color: $green;
+		}
+
+		&:active {
+			color: lighten($green, 10%);
+		}
+  }
+}
+
+.social {
+  @extend %disable-list;
+
+  display: flex;
+
+  &__item {
+    margin-right: 6.2rem;
+    
+
+    @include media (md) {
+      margin-right: 3rem;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    @extend %disable-link;
+    
+    color: $muted-400;
+    font-size: 2.4rem;
+    transition: color .1s;
+
+    &:hover {
+      color: $muted-500;
+    }
+
+    &:active {
+      color: $muted-200;
+    }
+  }
+}

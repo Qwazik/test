@@ -1,0 +1,16 @@
+mixin blog-item(data)
+	.blog-item(style="background-image:url("+data.image+")" class=data.class ? data.class : '')
+		.blog-item__inner
+			.blog-item__inner-main
+				.blog-item__name(
+					class=data.header.big ? 'blog-item__name_big' : ''
+					)=data.header.title
+				.blog-item__description!=data.description
+				a(href="blog-detail.html").blog-item__link 
+					span.blog-item__link-title Читать
+					i.blog-item__link-icon.icm.icm-left-arrow
+				
+			.blog-item__inner-footer
+				.label.blog-item__section(
+					class=data.section.class
+				)=data.section.name

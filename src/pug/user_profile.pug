@@ -1,0 +1,46 @@
+extends templates/_lk
+
+block head 
+    title Home
+
+block header 
+    +header({
+        auth: true,
+        border: true
+    })
+
+block main
+    +breadcrumbs({
+        container: true,
+        items: [
+            {
+                name: 'Личный кабинет',
+                link: '/'
+            },
+            {
+                name: 'Кабинет',
+                link: '/lk.html'
+            }
+        ]
+    })
+    +lk
+        block lk-info
+            +lk-info
+        block lk-main
+          .lk-main
+            .lk-main__header
+              .lk-main__header-row.lk-main__header-row_py-15.lk-main__header-row_sm-column
+                .lk-main__header-column
+                  h1.lk-main__title Мой кабинет
+                .lk-main__header-column.lk-main__header-column_left.lk-main__header-column_auto
+                  .lk-main__tarif
+                    span.lk-main__tarif-title Тариф
+                    span.lk-main__tarif-label
+                      span.label.label_small.label_orange Премиум
+                    a(href="#").link.lk-main__tarif-more Подробнее о тарифе
+            .lk-main__body
+              .lk-main__body-container
+                +companies
+                +user-nav
+block footer
+    +footer

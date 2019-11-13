@@ -1,0 +1,80 @@
+.lk-pagination {
+  &__list {
+    @extend %disable-list;
+    padding: 2.3rem 1.8rem;
+    display: flex;
+
+    @include media (sm) {
+      padding: 1.5rem 1.8rem;
+    }
+  }
+
+  &__arrow,
+  &__link {
+    @extend %disable-link;
+   
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    border-radius: 4px;
+
+    @include media (sm) {
+      width: 2.2rem;
+     height: 2.2rem;
+     font-size: 1.2rem;
+    }
+    
+  }
+
+  &__arrow {
+    @extend .link;
+    font-size: 2.3rem;
+
+    @include media (sm) {
+     font-size: 1.8rem;
+    }
+
+    &_disabled {
+      @extend .link_disabled;
+    }
+  }
+  
+  &__link {
+    &:hover  {
+      color: $green;
+    }
+    &:active {
+      color: $green-dark;
+    }
+    
+    &_active {
+      color: $white !important;
+      background-color: $green;
+      pointer-events: none;
+    }
+  }
+
+  &__item {
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include media (sm) {
+      margin-right: 0.5rem;
+    }
+
+    &_prev {
+      margin-right: auto;
+    }
+
+    &_next {
+      margin-left: auto;
+    }
+
+    
+  }
+}

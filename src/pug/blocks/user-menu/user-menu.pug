@@ -1,0 +1,28 @@
+mixin user-menu()
+  .user-menu.js-user-menu
+    .user-menu__user.js-user-menu-user
+      .user-menu__icon
+        i.icm.icm-user
+      .user-menu__info
+        p.user-menu__name Александр Иванов
+        p.user-menu__company ООО “Спецтехника-А”
+      .user-menu__arrow
+        .user-menu__arrow-icon: i.icm.icm-chevron_invert
+    ul.user-menu__menu.js-user-menu-menu
+      li.user-menu__item
+        a(href="#").user-menu__link
+          span.user-menu__link-icon: i.icm.icm-tarif
+          span Тариф
+          span.user-menu__label.label.label_orange.label_small Премиум
+      li.user-menu__item
+        a(href="#").user-menu__link
+          span.user-menu__link-icon: i.icm.icm-create
+          span Создать счет
+      li.user-menu__item
+        a(href="#").user-menu__link
+          span.user-menu__link-icon: i.icm.icm-settings
+          span Управление аккаунтом
+      li.user-menu__item
+        a(href="#").user-menu__link
+          span.user-menu__link-icon: i.icm.icm-logout
+          span Выход

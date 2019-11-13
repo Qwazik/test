@@ -1,0 +1,128 @@
+.user-nav {
+  &__row {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__column {
+    padding: 0 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 30px;
+
+    @include media(md) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__item{
+    /* sector */
+    padding: 2.1rem 2.2rem; 
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 4px;
+    min-height: 22.1rem;
+    display: flex;
+    flex-direction: column;
+
+    @include media(md) {
+      padding: 1.5rem;
+    }
+
+    &_green {
+      background: linear-gradient(150deg, #CAFFDF 0%, #D6FFBD 102.49%);
+     }
+    &_orange {
+      background: linear-gradient(150deg, #FFE7CA 0%, #FFDADA 102.49%);
+    }
+    &_blue {
+      background: linear-gradient(150deg, #CAFFEF 0%, #DEE1FF 102.49%);
+    }
+    &_violet {
+      background: linear-gradient(150deg, #E0E5FF 0%, #F6DEFF 102.49%);;
+    }
+  }
+
+  &__header {
+    display: flex;
+    margin-bottom: 2.0rem;
+  }
+  
+
+  &__header-add{
+    width: 4.2rem;
+    height: 4.2rem;
+    min-width: 0;
+    flex: 0 0 4.2rem;
+  }
+
+  &__header-icon {
+    font-size: 4.8rem;
+    margin-right: 1.4rem;
+
+     @include media(sm) {
+      display: none;
+    }
+  }
+
+  &__header-info {
+    margin-right: 1.5rem;
+  }
+
+  &__header-add {
+    margin-left: auto;
+  }
+
+  &__name {
+    margin-bottom: .5rem;
+    font-size: 1.9rem;
+
+  }
+
+  &__link {
+    @extend .link;
+    font-size: 1.3rem;
+  }
+
+  &__docs {
+    margin-top: auto;
+    
+    &_none {
+      color: #315658;
+      opacity: 0.2;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      .icm {
+        font-size: 4.6rem;
+        margin-right: 0.9rem;
+      }
+    }
+    
+  }
+
+  &__doc-status {
+    font-weight: bold;
+    color: #0FA65D;
+    font-size: 1.2rem;
+    margin-bottom: .6rem;
+  }
+  
+  &__doc-name {
+    font-size: 1.8rem;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+
+  }
+  
+  &__doc-info {
+    font-size: 1.2rem;
+    max-width: 160px;
+    color: #636363;
+  }
+}

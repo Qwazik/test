@@ -1,0 +1,11 @@
+node_modules
+build
+psd
+*.zip
+*.rar
+.idea
+yarn.lock
+yarn-error.log
+package-lock.json
+.publish
+source_files

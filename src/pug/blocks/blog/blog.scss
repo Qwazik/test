@@ -1,0 +1,51 @@
+.blog {
+
+	&_offset {
+			margin-bottom: 11rem;
+
+			@include media (xl) {
+				margin-bottom: 8rem;
+			}
+
+			@include media (lg) {
+				margin-bottom: 3rem;
+			}
+
+
+			@include media (sm) {
+				margin-bottom: 0rem;
+			}
+
+		
+	}
+
+	&_offset-small {
+			margin-bottom: 3rem;
+
+			@include media (lg) {
+				margin-bottom: 0rem;
+			}
+
+		
+	}
+
+	&__header {
+		margin-bottom: 4.4rem;
+
+		@include media (sm) {
+      margin-bottom: 2.5rem;
+    }
+	}
+}
+
+.blog-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__button {
+		padding: .6rem;
+		min-width: 7rem;
+		min-height: 3.2rem;
+	}
+}

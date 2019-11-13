@@ -1,0 +1,63 @@
+@import "_settings/_variables";
+@import "_settings/_mixins";
+@import "_settings/_reset";
+@import "_settings/_bootstrap-grid";
+@import "_settings/_rewrite";
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: $core-fz;
+  font-family: $ff-primary;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+
+  @include media (md) {
+		padding-top: 64px;
+	}
+
+  @include media (sm) {
+		padding-top: 46px;
+	}
+}
+
+/* ========================
+START: COMPONENTS
+========================*/
+@import '../pug/blocks/ui/ui';
+@import '../pug/blocks/header/header';
+@import '../pug/blocks/first-screen/first-screen';
+@import '../pug/blocks/how-works/how-works';
+@import '../pug/blocks/tarifs/tarifs';
+@import '../pug/blocks/blog/blog';
+@import '../pug/blocks/blog-item/blog-item';
+@import '../pug/blocks/register-form/register-form';
+@import '../pug/blocks/input/input';
+@import '../pug/blocks/categories/categories';
+@import '../pug/blocks/breadcrumbs/breadcrumbs';
+@import '../pug/blocks/pagination/pagination';
+@import '../pug/blocks/banner/banner';
+@import '../pug/blocks/blog-content/blog-content';
+@import '../pug/blocks/footer/footer';
+@import '../pug/blocks/form/form';
+@import '../pug/blocks/lk/lk';
+@import '../pug/blocks/lk-info/lk-info';
+@import '../pug/blocks/lk-main/lk-main';
+@import '../pug/blocks/user-menu/user-menu';
+@import '../pug/blocks/companies/companies';
+@import '../pug/blocks/dot-nav/dot-nav';
+@import '../pug/blocks/user-nav/user-nav';
+@import '../pug/blocks/lk-pagination/lk-pagination';
+@import '../pug/blocks/pay-list/pay-list';
+@import '../pug/blocks/lk-steps/lk-steps';
+@import '../pug/blocks/items-table/items-table';
+@import '../pug/blocks/select/select';
+@import '../pug/blocks/tip/tip';
+@import '../pug/blocks/filter/filter';
+/*========================
+END: COMPONENTS
+========================*/
+

@@ -1,0 +1,61 @@
+extends templates/_default
+
+block head 
+    title Home
+
+block header 
+    +header
+
+block main
+    +first-screen
+    +how-works
+    +tarifs
+    +blog({
+        header: 'Блог',
+        more: true,
+        className: 'blog_offset',
+        items: [
+            {
+                class: 'blog-item_pink blog-item_hide-image',
+                image: 'img/blog-item-pink.jpg',
+                big: true,
+                section: {
+                    class: 'label_green-dark',
+                    name: 'Интервью'
+                },
+                header: {
+                    title: 'Идеальное решение для фрилансера',
+                    big: true,
+                },
+                description: 'Фрилансер может выставить электронный счет (инвойс) заказчику и отправить его в email, в sms или через мессенджер.'
+            },
+            {
+                class: 'blog-item_muted',
+                image: '',
+                section: {
+                    class: 'label_affair',
+                    name: 'Оптимизация финансов'
+                },
+                header: {
+                    title: 'Точка безубыточности: как не работать себе в убыток?'
+                },
+                description: '<i>«Чем больше продашь, тем больше заработаешь»,</i> – эту формулу понимает любой предприниматель. Но, обычно, не все точно рассчитывают...'
+            },
+            {
+                class: 'blog-item_green',
+                image: 'img/blog-item-green1.jpg',
+                section: {
+                    class: 'label_green-medium',
+                    name: 'Финансы для начинающих'
+                },
+                header: {
+                    title: 'Управление финансами в стартапе'
+                },
+                description: 'На какие аспекты финансового управления нужно обращать внимание молодой и растущей компании, чтобы не стать банкротом...'
+            }
+        ]
+    })
+    +register-form
+    
+block footer
+    +footer
