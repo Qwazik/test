@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="libs/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="libs/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet">
+    <link href="libs/select2/dist/css/select2.min.css" rel="stylesheet">
     <link href="fonts/icomoon/style.css" rel="stylesheet">
     <link href="fonts/Rubik/stylesheet.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -29,7 +32,7 @@
                   </ul>
                 </nav>
               </div>
-              <div class="col-auto ml-auto"><a class="btn btn_dark main-header__button" href="#">Вход</a></div>
+              <div class="col-auto ml-auto"><a class="js-fancybox btn btn_dark main-header__button" href="#formLogin">Вход</a></div>
               <div class="col-auto d-flex d-md-none"> 
                 <button class="mobile-nav-btn js-mobile-btn"><span></span><span></span><span></span></button>
               </div>
@@ -96,7 +99,7 @@
                     <div class="blog-item__inner">
                       <div class="blog-item__inner-main">
                         <div class="blog-item__name">Налог на самозанятых граждан: выход из тени</div>
-                        <div class="blog-item__description">Налог на самозанятых граждан — это новый налоговый спецрежим в России. Закон о нем был подписан президентом и опубликован...</div><a class="blog-item__link" href="#"> <span class="blog-item__link-title">Читать</span><i class="blog-item__link-icon icm icm-left-arrow"></i></a>
+                        <div class="blog-item__description">Налог на самозанятых граждан — это новый налоговый спецрежим в России. Закон о нем был подписан президентом и опубликован...</div><a class="blog-item__link" href="blog-detail.html"> <span class="blog-item__link-title">Читать</span><i class="blog-item__link-icon icm icm-left-arrow"></i></a>
                       </div>
                       <div class="blog-item__inner-footer">
                         <div class="label blog-item__section label_red">Банки</div>
@@ -109,7 +112,7 @@
                     <div class="blog-item__inner">
                       <div class="blog-item__inner-main">
                         <div class="blog-item__name">Новые законы 2019: главные изменения законодательства</div>
-                        <div class="blog-item__description">Каждый год Госдума и Правительство РФ неустанно трудятся над созданием новых законов и этот год не стал исключением.</div><a class="blog-item__link" href="#"> <span class="blog-item__link-title">Читать</span><i class="blog-item__link-icon icm icm-left-arrow"></i></a>
+                        <div class="blog-item__description">Каждый год Госдума и Правительство РФ неустанно трудятся над созданием новых законов и этот год не стал исключением.</div><a class="blog-item__link" href="blog-detail.html"> <span class="blog-item__link-title">Читать</span><i class="blog-item__link-icon icm icm-left-arrow"></i></a>
                       </div>
                       <div class="blog-item__inner-footer">
                         <div class="label blog-item__section label_blue">Аналитика</div>
@@ -122,7 +125,7 @@
                     <div class="blog-item__inner">
                       <div class="blog-item__inner-main">
                         <div class="blog-item__name">Как работать дома и не сойти с ума: полезные советы</div>
-                        <div class="blog-item__description">Если вы работали в офисе по найму, а сейчас ушли в свободное плавание и работаете дома, но испытываете трудности с работоспособностью...</div><a class="blog-item__link" href="#"> <span class="blog-item__link-title">Читать</span><i class="blog-item__link-icon icm icm-left-arrow"></i></a>
+                        <div class="blog-item__description">Если вы работали в офисе по найму, а сейчас ушли в свободное плавание и работаете дома, но испытываете трудности с работоспособностью...</div><a class="blog-item__link" href="blog-detail.html"> <span class="blog-item__link-title">Читать</span><i class="blog-item__link-icon icm icm-left-arrow"></i></a>
                       </div>
                       <div class="blog-item__inner-footer">
                         <div class="label blog-item__section label_green">Новости Bills</div>
@@ -135,7 +138,7 @@
                     <div class="blog-item__inner">
                       <div class="blog-item__inner-main">
                         <div class="blog-item__name">Свой бухгалтер или фирма, оказывающая бухгалтерские услуги: что выбрать</div>
-                        <div class="blog-item__description">Что лучше свой бухгалтер или аутсорсинг — фирма, оказывающая бухгалтерские услуги? Это вопрос выбора, который всегда...</div><a class="blog-item__link" href="#"> <span class="blog-item__link-title">Читать</span><i class="blog-item__link-icon icm icm-left-arrow"></i></a>
+                        <div class="blog-item__description">Что лучше свой бухгалтер или аутсорсинг — фирма, оказывающая бухгалтерские услуги? Это вопрос выбора, который всегда...</div><a class="blog-item__link" href="blog-detail.html"> <span class="blog-item__link-title">Читать</span><i class="blog-item__link-icon icm icm-left-arrow"></i></a>
                       </div>
                       <div class="blog-item__inner-footer">
                         <div class="label blog-item__section label_green-medium">Финансы для начинающих</div>
@@ -179,9 +182,165 @@
             </div>
           </div>
         </div>
+        <div class="d-none">
+          <div id="formRegister">
+            <form class="form" action="#">
+              <div class="form__main">
+                <div class="form__title">Регистрация</div>
+                <div class="form__row">
+                  <div class="form__field">
+                    <div class="form__field-title">ФИО</div>
+                    <div class="form__field-input">
+                      <input class="form__input" type="text" placeholder="Иванов Иван Иванович"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__field">
+                    <div class="form__field-title">Email</div>
+                    <div class="form__field-input">
+                      <input class="form__input" type="email" placeholder="youremail@domain.ru"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__field">
+                    <div class="form__field-title">Телефон</div>
+                    <div class="form__field-input">
+                      <input class="form__input" type="tel" placeholder="+7 (495) 123 45 67"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__field">
+                    <div class="form__field-title">Пароль</div>
+                    <div class="form__field-input">
+                      <div class="input-password js-password">
+                        <div class="input-password__input">
+                          <input class="form__input js-password-input" type="password" placeholder="Придумайте пароль"/>
+                          <button class="input-password__show js-password-show" type="button"><i class="icm icm-eye"></i></button>
+                        </div>
+                        <div class="input-password__check">
+                          <div class="input-password__check-indicator js-password-indicator">
+                            <div class="input-password__check-indicator-percent js-password-percent">
+                              <div class="input-password__check-indicator-gradient js-password-gradient"></div>
+                            </div>
+                          </div>
+                          <div class="input-password__check-message js-password-message">Введите пароль</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__footer">
+                  <div class="form__footer-column"><a class="btn btn_green" href="#">Зарегистрироваться</a></div>
+                  <div class="form__footer-column">
+                    <div class="form__policy">Нажимая на эту кнопку я принимаю условия <a href="#" class="link">политики конфиденциальности</a> и соглашаюсь с <a href="#" class="link">правилами сервиса</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__or">
+                <div class="form__or-row form__or-row_soc-auth">
+                  <div class="form__title form__title_or">или...</div>
+                  <div class="form__row"><a class="btn btn_blue" href="#"><span class="btn__icon"><i class="icm icm-facebook-logo-2"></i></span><span nowrap="nowrap">Вход с Facebook</span></a></div>
+                  <div class="form__row"><a class="btn btn_white" href="#"><span class="btn__icon"><i class="icm icm-google"></i></span><span nowrap="nowrap">Вход с Google</span></a></div>
+                </div>
+                <div class="form__or-row">
+                  <div class="form__account"> 
+                    <div class="form__account-title">Уже есть аккаунт Bills?</div>
+                    <div class="form__account-button"><a class="js-fancybox btn btn_dark" href="#formLogin">Вход</a></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div id="formLogin">
+            <form class="form" action="#">
+              <div class="form__main">
+                <div class="form__title">Вход</div>
+                <div class="form__row">
+                  <div class="form__field">
+                    <div class="form__field-title">Email</div>
+                    <div class="form__field-input">
+                      <input class="form__input" type="email" placeholder="youremail@domain.ru"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__field">
+                    <div class="form__field-title">Пароль</div>
+                    <div class="form__field-input">
+                      <div class="input-password">
+                        <div class="input-password__input">
+                          <input class="form__input" type="password" placeholder="Ваш пароль"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__field">
+                    <div class="form__field-title"></div>
+                    <div class="form__field-input">
+                      <label class="checkbox-label"><span class="checkbox-label__checkbox"><span class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="save"/><span class="checkbox__icon"></span></span></span><span class="checkbox-label__title">Запомнить мой вход</span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__footer form__footer_no-column">
+                  <div class="form__footer-column"><a class="btn btn_dark" href="#">Вход</a></div>
+                  <div class="form__footer-column"><a class="js-fancybox form__forgot" href="#formRestore">Я забыл(а) пароль</a></div>
+                </div>
+              </div>
+              <div class="form__or">
+                <div class="form__or-row form__or-row_soc-auth">
+                  <div class="form__title form__title_or">или...</div>
+                  <div class="form__row"><a class="btn btn_blue" href="#"><span class="btn__icon"><i class="icm icm-facebook-logo-2"></i></span><span nowrap="nowrap">Вход с Facebook</span></a></div>
+                  <div class="form__row"><a class="btn btn_white" href="#"><span class="btn__icon"><i class="icm icm-google"></i></span><span nowrap="nowrap">Вход с Google</span></a></div>
+                </div>
+                <div class="form__or-row">
+                  <div class="form__account"> 
+                    <div class="form__account-title">У меня нет <br> аккаунта</div>
+                    <div class="form__account-button"><a class="js-fancybox btn btn_green" href="#formRegister">Регистрация</a></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div id="formRestore">
+            <form class="form" action="#">
+              <div class="form__main">
+                <div class="form__title form__title_with-desc">Восстановление пароля</div>
+                <div class="form__description">Укажите электронную почту указанную при регистрации и вам будет отправлена ссылка на восстановление пароля</div>
+                <div class="form__row">
+                  <div class="form__field">
+                    <div class="form__field-title">Email</div>
+                    <div class="form__field-input">
+                      <input class="form__input" type="email" placeholder="youremail@domain.ru"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__footer">
+                  <div class="form__footer-column"><a class="btn btn_dark" href="#">Восстановить</a></div>
+                </div>
+              </div>
+              <div class="form__or">
+                <div class="form__or-row form__or-row_soc-auth">
+                  <div class="form__description form__description_or">Возникли трудности или вопросы по авторизации?</div>
+                </div>
+                <div class="form__or-row"><a class="btn btn_green" href="#">Напишите нам</a></div>
+              </div>
+            </form>
+          </div>
+        </div>
       </footer>
     </div>
     <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="libs/parsleyjs/dist/parsley.min.js"></script>
+    <script src="libs/parsleyjs/dist/i18n/ru.js"></script>
+    <script src="libs/parsleyjs/dist/i18n/ru.extra.js"></script>
+    <script src="libs/jquery.maskedinput/dist/jquery.maskedinput.min.js"></script>
+    <script src="libs/air-datepicker/dist/js/datepicker.min.js"></script>
+    <script src="libs/select2/dist/js/select2.full.min.js"></script>
     <script src="js/custom.js"></script>
   </body>
 </html>

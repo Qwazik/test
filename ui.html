@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="libs/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="libs/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet">
+    <link href="libs/select2/dist/css/select2.min.css" rel="stylesheet">
     <link href="fonts/icomoon/style.css" rel="stylesheet">
     <link href="fonts/Rubik/stylesheet.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -109,7 +112,7 @@
           </div>
           <div class="row">
             <div class="col-12 fz-5 mb-5"><span class="s48 s-inline-block p-1"><img src="img/icon1.svg" alt=""></span><span class="s48 s-inline-block p-1"><img src="img/icon2.svg" alt=""></span><span class="s48 s-inline-block p-1"><img src="img/icon3.svg" alt=""></span><span class="s48 s-inline-block p-1"><img src="img/icon4.svg" alt=""></span><span class="s48 s-inline-block p-1"><img src="img/icon5.svg" alt=""></span><span class="s48 s-inline-block p-1"><img src="img/icon6.svg" alt=""></span>
-              <hr><span class="d-inline-block p-1"><i class="icm icm-pdf-file-format-symbol"></i></span><span class="d-inline-block p-1"><i class="icm icm-ruble"></i></span><span class="d-inline-block p-1"><i class="icm icm-search"></i></span><span class="d-inline-block p-1"><i class="icm icm-settings"></i></span><span class="d-inline-block p-1"><i class="icm icm-special"></i></span><span class="d-inline-block p-1"><i class="icm icm-tarif"></i></span><span class="d-inline-block p-1"><i class="icm icm-three-dots-more-indicator"></i></span><span class="d-inline-block p-1"><i class="icm icm-tick-sign"></i></span><span class="d-inline-block p-1"><i class="icm icm-twitter"></i></span><span class="d-inline-block p-1"><i class="icm icm-user"></i></span><span class="d-inline-block p-1"><i class="icm icm-archive"></i></span><span class="d-inline-block p-1"><i class="icm icm-back-arrow"></i></span><span class="d-inline-block p-1"><i class="icm icm-bill"></i></span><span class="d-inline-block p-1"><i class="icm icm-check-mark"></i></span><span class="d-inline-block p-1"><i class="icm icm-close-button-2"></i></span><span class="d-inline-block p-1"><i class="icm icm-create"></i></span><span class="d-inline-block p-1"><i class="icm icm-download"></i></span><span class="d-inline-block p-1"><i class="icm icm-facebook-logo-2"></i></span><span class="d-inline-block p-1"><i class="icm icm-filter-results-button"></i></span><span class="d-inline-block p-1"><i class="icm icm-gear"></i></span><span class="d-inline-block p-1"><i class="icm icm-google"></i></span><span class="d-inline-block p-1"><i class="icm icm-invoice-1"></i></span><span class="d-inline-block p-1"><i class="icm icm-left-arrow-4"></i></span><span class="d-inline-block p-1"><i class="icm icm-left-arrow--left"></i></span><span class="d-inline-block p-1"><i class="icm icm-list"></i></span><span class="d-inline-block p-1"><i class="icm icm-logout"></i></span><span class="d-inline-block p-1"><i class="icm icm-contacts"></i></span><span class="d-inline-block p-1"><i class="icm icm-copy"></i></span><span class="d-inline-block p-1"><i class="icm icm-drop_icon"></i></span><span class="d-inline-block p-1"><i class="icm icm-question-mark"></i></span><span class="d-inline-block p-1"><i class="icm icm-ruble1"></i></span><span class="d-inline-block p-1"><i class="icm icm-calendar"></i></span><span class="d-inline-block p-1"><i class="icm icm-chevron"></i></span><span class="d-inline-block p-1"><i class="icm icm-chevron_invert"></i></span>
+              <hr><span class="d-inline-block p-1"><i class="icm icm-pdf-file-format-symbol"></i></span><span class="d-inline-block p-1"><i class="icm icm-ruble"></i></span><span class="d-inline-block p-1"><i class="icm icm-search"></i></span><span class="d-inline-block p-1"><i class="icm icm-settings"></i></span><span class="d-inline-block p-1"><i class="icm icm-special"></i></span><span class="d-inline-block p-1"><i class="icm icm-tarif"></i></span><span class="d-inline-block p-1"><i class="icm icm-three-dots-more-indicator"></i></span><span class="d-inline-block p-1"><i class="icm icm-tick-sign"></i></span><span class="d-inline-block p-1"><i class="icm icm-twitter"></i></span><span class="d-inline-block p-1"><i class="icm icm-user"></i></span><span class="d-inline-block p-1"><i class="icm icm-archive"></i></span><span class="d-inline-block p-1"><i class="icm icm-back-arrow"></i></span><span class="d-inline-block p-1"><i class="icm icm-bill"></i></span><span class="d-inline-block p-1"><i class="icm icm-check-mark"></i></span><span class="d-inline-block p-1"><i class="icm icm-close-button-2"></i></span><span class="d-inline-block p-1"><i class="icm icm-create"></i></span><span class="d-inline-block p-1"><i class="icm icm-download"></i></span><span class="d-inline-block p-1"><i class="icm icm-facebook-logo-2"></i></span><span class="d-inline-block p-1"><i class="icm icm-filter-results-button"></i></span><span class="d-inline-block p-1"><i class="icm icm-gear"></i></span><span class="d-inline-block p-1"><i class="icm icm-google"></i></span><span class="d-inline-block p-1"><i class="icm icm-invoice-1"></i></span><span class="d-inline-block p-1"><i class="icm icm-left-arrow-4"></i></span><span class="d-inline-block p-1"><i class="icm icm-left-arrow_left"></i></span><span class="d-inline-block p-1"><i class="icm icm-list"></i></span><span class="d-inline-block p-1"><i class="icm icm-logout"></i></span><span class="d-inline-block p-1"><i class="icm icm-contacts"></i></span><span class="d-inline-block p-1"><i class="icm icm-copy"></i></span><span class="d-inline-block p-1"><i class="icm icm-drop_icon"></i></span><span class="d-inline-block p-1"><i class="icm icm-question-mark"></i></span><span class="d-inline-block p-1"><i class="icm icm-ruble1"></i></span><span class="d-inline-block p-1"><i class="icm icm-calendar"></i></span><span class="d-inline-block p-1"><i class="icm icm-chevron"></i></span><span class="d-inline-block p-1"><i class="icm icm-chevron_invert"></i></span>
             </div>
           </div>
           <div class="row"> 
@@ -118,79 +121,179 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6 mb-5"><a class="btn btn_auto" href="#"><span>Вход</span></a>
+            <div class="col-12 col-md-6 mb-5"><a class="btn btn_auto" href="#"><span>Вход</span></a>
               <hr><a class="btn btn_dark" href="#"><span>Вход		</span></a>
               <hr><a class="btn btn_green btn_big" href="#"><span>Создать счет	</span></a>
               <hr><a class="btn btn_green-dark btn_small" href="#"><span>Финансы</span></a>
               <hr><a class="btn btn_white" href="#"><span class="btn__icon"><i class="icm icm-google"></i></span><span>Вход с Google</span></a>
             </div>
-            <div class="col-6 mb-5"><a class="btn btn_auto" href="#"><span class="btn__icon"><i class="icm icm-facebook-logo-2"></i></span><span>Вход</span></a>
+            <div class="col-12 col-md-6 mb-5"><a class="btn btn_auto" href="#"><span class="btn__icon"><i class="icm icm-facebook-logo-2"></i></span><span>Вход</span></a>
               <hr><a class="btn btn_blue" href="#"><span class="btn__icon"><i class="icm icm-facebook-logo-2"></i></span><span>Вход с Facebook</span></a>
               <hr><a class="btn btn_muted" href="#"><span>Еще</span></a>
               <hr><a class="btn btn_orange btn_x-small" href="#"><span>Премиум</span></a>
               <hr><a class="btn btn_white" href="#"><span>Премиум</span></a>
+              <hr><a class="btn btn_bd-green btn_base" href="#"><span class="btn__icon"><i class="icm icm-filter-results-button fz-4"></i></span><span>Фильтр</span><span class="btn_notify">3</span></a>
             </div>
           </div>
-          <div class="row">
+          <div class="row mb-5">
             <div class="col-12 mb-3">
               <div class="header">Формы</div>
             </div>
             <div class="col-12 mb-5">
-              <div class="form">
-                <div class="form__main">
-                  <div class="form__title">Регистрация</div>
-                  <div class="form__row">
-                    <div class="form__field">
-                      <div class="form__field-title">ФИО</div>
-                      <div class="form__field-input">
-                        <input class="form__input" type="text" placeholder="Иванов Иван Иванович">
+              <div id="formRegister">
+                <form class="form" action="#">
+                  <div class="form__main">
+                    <div class="form__title">Регистрация</div>
+                    <div class="form__row">
+                      <div class="form__field">
+                        <div class="form__field-title">ФИО</div>
+                        <div class="form__field-input">
+                          <input class="form__input" type="text" placeholder="Иванов Иван Иванович"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field">
+                        <div class="form__field-title">Email</div>
+                        <div class="form__field-input">
+                          <input class="form__input" type="email" placeholder="youremail@domain.ru"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field">
+                        <div class="form__field-title">Телефон</div>
+                        <div class="form__field-input">
+                          <input class="form__input" type="tel" placeholder="+7 (495) 123 45 67"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field">
+                        <div class="form__field-title">Пароль</div>
+                        <div class="form__field-input">
+                          <div class="input-password js-password">
+                            <div class="input-password__input">
+                              <input class="form__input js-password-input" type="password" placeholder="Придумайте пароль"/>
+                              <button class="input-password__show js-password-show" type="button"><i class="icm icm-eye"></i></button>
+                            </div>
+                            <div class="input-password__check">
+                              <div class="input-password__check-indicator js-password-indicator">
+                                <div class="input-password__check-indicator-percent js-password-percent">
+                                  <div class="input-password__check-indicator-gradient js-password-gradient"></div>
+                                </div>
+                              </div>
+                              <div class="input-password__check-message js-password-message">Введите пароль</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__footer">
+                      <div class="form__footer-column"><a class="btn btn_green" href="#">Зарегистрироваться</a></div>
+                      <div class="form__footer-column">
+                        <div class="form__policy">Нажимая на эту кнопку я принимаю условия <a href="#" class="link">политики конфиденциальности</a> и соглашаюсь с <a href="#" class="link">правилами сервиса</a></div>
                       </div>
                     </div>
                   </div>
-                  <div class="form__row">
-                    <div class="form__field">
-                      <div class="form__field-title">Email</div>
-                      <div class="form__field-input">
-                        <input class="form__input" type="email" placeholder="youremail@domain.ru">
+                  <div class="form__or">
+                    <div class="form__or-row form__or-row_soc-auth">
+                      <div class="form__title form__title_or">или...</div>
+                      <div class="form__row"><a class="btn btn_blue" href="#"><span class="btn__icon"><i class="icm icm-facebook-logo-2"></i></span><span nowrap="nowrap">Вход с Facebook</span></a></div>
+                      <div class="form__row"><a class="btn btn_white" href="#"><span class="btn__icon"><i class="icm icm-google"></i></span><span nowrap="nowrap">Вход с Google</span></a></div>
+                    </div>
+                    <div class="form__or-row">
+                      <div class="form__account"> 
+                        <div class="form__account-title">Уже есть аккаунт Bills?</div>
+                        <div class="form__account-button"><a class="js-fancybox btn btn_dark" href="#formLogin">Вход</a></div>
                       </div>
                     </div>
                   </div>
-                  <div class="form__row">
-                    <div class="form__field">
-                      <div class="form__field-title">Телефон</div>
-                      <div class="form__field-input">
-                        <input class="form__input" type="tel" placeholder="+7 (495) 123 45 67">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col-12 mb-5">
+              <div id="formLogin">
+                <form class="form" action="#">
+                  <div class="form__main">
+                    <div class="form__title">Вход</div>
+                    <div class="form__row">
+                      <div class="form__field">
+                        <div class="form__field-title">Email</div>
+                        <div class="form__field-input">
+                          <input class="form__input" type="email" placeholder="youremail@domain.ru"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field">
+                        <div class="form__field-title">Пароль</div>
+                        <div class="form__field-input">
+                          <div class="input-password">
+                            <div class="input-password__input">
+                              <input class="form__input" type="password" placeholder="Ваш пароль"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__field">
+                        <div class="form__field-title"></div>
+                        <div class="form__field-input">
+                          <label class="checkbox-label"><span class="checkbox-label__checkbox"><span class="checkbox">
+                                <input class="checkbox__input" type="checkbox" name="save"/><span class="checkbox__icon"></span></span></span><span class="checkbox-label__title">Запомнить мой вход</span></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__footer form__footer_no-column">
+                      <div class="form__footer-column"><a class="btn btn_dark" href="#">Вход</a></div>
+                      <div class="form__footer-column"><a class="js-fancybox form__forgot" href="#formRestore">Я забыл(а) пароль</a></div>
+                    </div>
+                  </div>
+                  <div class="form__or">
+                    <div class="form__or-row form__or-row_soc-auth">
+                      <div class="form__title form__title_or">или...</div>
+                      <div class="form__row"><a class="btn btn_blue" href="#"><span class="btn__icon"><i class="icm icm-facebook-logo-2"></i></span><span nowrap="nowrap">Вход с Facebook</span></a></div>
+                      <div class="form__row"><a class="btn btn_white" href="#"><span class="btn__icon"><i class="icm icm-google"></i></span><span nowrap="nowrap">Вход с Google</span></a></div>
+                    </div>
+                    <div class="form__or-row">
+                      <div class="form__account"> 
+                        <div class="form__account-title">У меня нет <br> аккаунта</div>
+                        <div class="form__account-button"><a class="js-fancybox btn btn_green" href="#formRegister">Регистрация</a></div>
                       </div>
                     </div>
                   </div>
-                  <div class="form__row">
-                    <div class="form__field">
-                      <div class="form__field-title">Пароль</div>
-                      <div class="form__field-input">
-                        <input class="form__input" type="text" placeholder="Придумайте пароль">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col-12 mb-5">
+              <div id="formRestore">
+                <form class="form" action="#">
+                  <div class="form__main">
+                    <div class="form__title form__title_with-desc">Восстановление пароля</div>
+                    <div class="form__description">Укажите электронную почту указанную при регистрации и вам будет отправлена ссылка на восстановление пароля</div>
+                    <div class="form__row">
+                      <div class="form__field">
+                        <div class="form__field-title">Email</div>
+                        <div class="form__field-input">
+                          <input class="form__input" type="email" placeholder="youremail@domain.ru"/>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="form__footer">
-                    <div class="form__footer-column"><a class="btn btn_green" href="#">Зарегистрироваться</a></div>
-                    <div class="form__footer-column">
-                      <div class="form__policy">Нажимая на эту кнопку я принимаю условия <a href="#" class="link">политики конфиденциальности</a> и соглашаюсь с <a href="#" class="link">правилами сервиса</a></div>
+                    <div class="form__footer">
+                      <div class="form__footer-column"><a class="btn btn_dark" href="#">Восстановить</a></div>
                     </div>
                   </div>
-                </div>
-                <div class="form__or">
-                  <div class="form__or-row">
-                    <div class="form__title">или...</div>
-                    <div class="form__row"><a class="btn btn_blue" href="#"><span class="btn__icon"><i class="icm icm-facebook-logo-2"></i></span><span>Вход с Facebook</span></a></div>
-                    <div class="form__row"><a class="btn btn_white" href="#"><span class="btn__icon"><i class="icm icm-google"></i></span><span>Вход с Google</span></a></div>
-                  </div>
-                  <div class="form__or-row">
-                    <div class="form__account">
-                      <div class="form__account-title">Уже есть аккаунт Bills?</div>
-                      <div class="form__account-button"><a class="btn btn_dark" href="#">Вход</a></div>
+                  <div class="form__or">
+                    <div class="form__or-row form__or-row_soc-auth">
+                      <div class="form__description form__description_or">Возникли трудности или вопросы по авторизации?</div>
                     </div>
+                    <div class="form__or-row"><a class="btn btn_green" href="#">Напишите нам</a></div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -200,6 +303,13 @@
       </footer>
     </div>
     <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="libs/parsleyjs/dist/parsley.min.js"></script>
+    <script src="libs/parsleyjs/dist/i18n/ru.js"></script>
+    <script src="libs/parsleyjs/dist/i18n/ru.extra.js"></script>
+    <script src="libs/jquery.maskedinput/dist/jquery.maskedinput.min.js"></script>
+    <script src="libs/air-datepicker/dist/js/datepicker.min.js"></script>
+    <script src="libs/select2/dist/js/select2.full.min.js"></script>
     <script src="js/custom.js"></script>
   </body>
 </html>
